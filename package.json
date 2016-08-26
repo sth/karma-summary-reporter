@@ -1,0 +1,11 @@
+{
+  "name": "karma-summary-reporter",
+  "version": "1.1.0",
+  "description": "Displays a summary of tested browsers and failed testcases after a test run",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephan Hohe <sth.dev@tejp.de>",
+  "license": "ISC"
+}
