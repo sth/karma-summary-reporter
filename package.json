@@ -11,10 +11,6 @@
   "dependencies": {
     "karma": "^1.2.0"
   },
-  "devDependencies": {
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-jasmine": "^1.0.2"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sth/karma-summary-reporter.git"
