@@ -7,8 +7,18 @@ function strmul(s, n) {
 	return r;
 }
 
-var SummaryReporter = function(baseReporterDecorator) {
+var SummaryReporter = function(baseReporterDecorator, config) {
 	baseReporterDecorator(this);
+
+	// Configuration
+	config.summaryReporter = config.summaryReporter || {};
+	var show = config.summaryReporter.show || 'failed';
+	var specLength = config.summaryReporter.specLength || 50;
+
+	function green(s) { return (config.colors ? s.green : s); }
+	function yellow(s) { return (config.colors ? s.yellow : s); }
+	function red(s) { return (config.colors ? s.red : s); }
+	function bold(s) { return (config.colors ? s.bold : s); }
 
 	var specorder, specresults;
 
@@ -24,15 +34,10 @@ var SummaryReporter = function(baseReporterDecorator) {
 		specresults[specid].results[browser.id] = result;
 	}
 
-
-	// Maximum length of the spec label
-	var speclength = 50;
-
 	// Previously printed spec path
 	var currentPath;
 	this.printSpecLabel = function(path) {
 		var indent = "  ";
-		var i;
 		path.forEach(function(s, i) {
 			// We keep the current comon prefix and start to print
 			// the new information on the first difference.
@@ -41,8 +46,8 @@ var SummaryReporter = function(baseReporterDecorator) {
 			}
 			if (i >= currentPath.length) {
 				var label = indent + s;
-				if (label.length > speclength) {
-					label = label.slice(0, speclength-3) + '...';
+				if (label.length > specLength) {
+					label = label.slice(0, specLength-3) + '...';
 				}
 				this.writeCommonMsg(label);
 
@@ -50,7 +55,7 @@ var SummaryReporter = function(baseReporterDecorator) {
 					this.writeCommonMsg("\n");
 				}
 				else {
-					this.writeCommonMsg(strmul(' ', speclength - label.length));
+					this.writeCommonMsg(strmul(' ', specLength - label.length));
 				}
 				currentPath.push(s);
 			}
@@ -60,19 +65,28 @@ var SummaryReporter = function(baseReporterDecorator) {
 
 	this.printResultLabel = function(result) {
 		if (result === undefined)
-			this.writeCommonMsg(' ? '.yellow);
+			this.writeCommonMsg(yellow(' ? '));
 		else if (result.skipped)
-			this.writeCommonMsg(' - '.yellow);
+			this.writeCommonMsg(yellow(' - '));
 		else if (result.success) {
 			if (!result.partial)
-				this.writeCommonMsg(' ✓ '.green);
+				this.writeCommonMsg(green(' ✓ '));
 			else
-				this.writeCommonMsg('(✓)'.yellow);
+				this.writeCommonMsg(yellow('(✓)'));
 		}
 		else {
-			this.writeCommonMsg(' ✗ '.red);
+			this.writeCommonMsg(red(' ✗ '));
 		}
 	};
+
+	this.printTableHeader = function(browsers) {
+		this.writeCommonMsg(strmul(' ', specLength));
+		this.writeCommonMsg(' all  ');
+		browsers.forEach(function(browser, i) {
+			this.writeCommonMsg(' '+  i + ' ');
+		}, this);
+		this.writeCommonMsg('\n');
+	}
 
 	this.onRunStart = function() {
 		this._browsers = [];
@@ -82,20 +96,26 @@ var SummaryReporter = function(baseReporterDecorator) {
 	}
 
 	this.onRunComplete = function(browsers, results) {
-		this.writeCommonMsg('SUMMARY'.bold + '\n');
+		this.writeCommonMsg(bold('SUMMARY') + '\n');
+
+		// Browser overview
 		browsers.forEach(function(browser, i) {
 			this.writeCommonMsg(' ' + i + ': ' + this.renderBrowser(browser) + '\n');
 		}, this);
-		this.writeCommonMsg(strmul(' ', speclength));
-		this.writeCommonMsg(' all  ');
-		browsers.forEach(function(browser, i) {
-			this.writeCommonMsg(' '+  i + ' ');
-		}, this);
-		this.writeCommonMsg('\n');
 
+		if (!specorder.length) {
+			this.writeCommonMsg('No tests did run in any browsers.');
+			return;
+		}
+
+		var tableHeaderShown = false;
+
+		// Test details
+		var counts = { shown: 0, hidden: 0 };
 		specorder.forEach(function(specid) {
 			var sr = specresults[specid];
-			var summary = { partial: false, success: true, missing: false };
+			// Collect information from all browsers
+			var summary = { partial: false, success: true };
 			browsers.forEach(function(b) {
 				if (sr.results[b.id]) {
 					summary.partial = summary.partial || sr.results[b.id].skipped;
@@ -107,6 +127,24 @@ var SummaryReporter = function(baseReporterDecorator) {
 				}
 			});
 
+			if (summary.success) {
+				// Maybe we don't even want to show it
+				if (show == 'failed') {
+					counts.hidden++;
+					return;
+				}
+				if (show == 'skipped' && !summary.patial) {
+					counts.hidden++;
+					return;
+				}
+			}
+
+			// We want to actually display it
+			if (!tableHeaderShown) {
+				this.printTableHeader(browsers);
+				tableHeaderShown = true;
+			}
+
 			this.printSpecLabel(sr.spec);
 			this.writeCommonMsg(' ');
 			this.printResultLabel(summary);
@@ -115,11 +153,21 @@ var SummaryReporter = function(baseReporterDecorator) {
 				this.printResultLabel(sr.results[browser.id], i);
 			}, this);
 			this.writeCommonMsg("\n");
+			counts.shown++;
 		}, this);
+
+		if (counts.hidden) {
+			this.writeCommonMsg("  " + green(''+counts.hidden) +
+				(counts.shown ? " more" : "") +
+				" test cases successful in all browsers\n")
+		}
 	};
 }
 
-SummaryReporter.$inject = ['baseReporterDecorator'];
+SummaryReporter.$inject = [
+	'baseReporterDecorator',
+	'config'
+];
 
 module.exports = {
 	'reporter:summary': ['type', SummaryReporter]

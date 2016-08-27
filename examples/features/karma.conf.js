@@ -4,5 +4,8 @@ module.exports = function(config) {
     frameworks: ['mocha', 'chai'],
     files: [ 'tests.js' ],
     reporters: ['progress', 'summary'],
+    summaryReporter: {
+      show: 'all'
+    }
   })
 }

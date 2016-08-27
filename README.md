@@ -70,5 +70,30 @@ We can see that IE is lacking some features here.
 
 ## Config
 
-Not yet.
+```
+module.exports = function(config) {
+   config.set({
+      reporters: ['progress', 'summary'],
+      summaryReporter: {
+         // 'failed', 'skipped' or 'all'
+         show: 'failed',
+         // Limit the spec label to this length
+         specLength: 50
+      }
+   });
+};
+```
+
+### show
+
+Select which tests are dislayed in the summary. There are three choices:
+
+- `'failed'`: Only show tests that failed in some browser (default)
+- `'skipped'`: Additionally show tests that got skipped in some browser
+- `'all'`: Show all test, also ones that didn't fail
+
+### specLength
+
+Space reserved to display the spec label (width of the first column in
+the results table).
 
