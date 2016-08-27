@@ -8,10 +8,19 @@ The plugin is intended to be used in addition to some other reporter that
 shows you the error details. This plugin only shows a overview of passed and
 failed testcases, no more detailed information:
 
-
 ```
-$ karma test-stringfunctions.conf.js
-[... error output and detail for example from karma-dot-reporter]
+$ karma start
+[...]
+SUMMARY
+ 0: Chromium 51.0.2704 (Ubuntu 0.0.0): Executed 3 of 3 (1 FAILED) (0.083 secs / 0.003 secs)
+ 1: Firefox 48.0.0 (Ubuntu 0.0.0): Executed 3 of 3 (1 FAILED) (0.068 secs / 0.009 secs)
+ 2: IE 11.0.0 (Windows 7 0.0.0): Executed 3 of 3 (3 FAILED) ERROR (0.014 secs / 0.001 secs)
+                                                   all   0  1  2 
+  addPrefix()
+    should combine both strings                     ✗    ✗  ✗  ✗ 
+  stripPrefix()
+    should remove the prefix if present             ✗    ✓  ✓  ✗ 
+    should do nothing if the prefix isn't present   ✗    ✓  ✓  ✗ 
 ```
 
 ## Use cases
