@@ -23,6 +23,10 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	var specorder, specresults;
 
 	this.specSuccess = this.specFailure = this.specSkipped = function(browser, result) {
+		if (!result.suite) {
+			return;
+		}
+
 		var specid = result.suite.join('/') + '/' + result.description;
 		if (!(specid in specresults)) {
 			specorder.push(specid);
