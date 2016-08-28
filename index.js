@@ -119,7 +119,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 		specorder.forEach(function(specid) {
 			var sr = specresults[specid];
 			// Collect information from all browsers
-			var summary = { partial: false, success: true };
+			var summary = { partial: false, skipped: true, success: true };
 			browsers.forEach(function(b) {
 				if (sr.results[b.id]) {
 					summary.partial = summary.partial || sr.results[b.id].skipped;
@@ -137,7 +137,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 					counts.hidden++;
 					return;
 				}
-				if (show == 'skipped' && !summary.patial) {
+				if (show == 'skipped' && !summary.partial) {
 					counts.hidden++;
 					return;
 				}
