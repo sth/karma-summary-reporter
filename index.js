@@ -14,6 +14,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	config.summaryReporter = config.summaryReporter || {};
 	var show = config.summaryReporter.show || 'failed';
 	var specLength = config.summaryReporter.specLength || 50;
+	var overviewColumn = config.summaryReporter.overviewColumn === false ? false : true;
 
 	function green(s) { return (config.colors ? s.green : s); }
 	function yellow(s) { return (config.colors ? s.yellow : s); }
@@ -85,7 +86,9 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 
 	this.printTableHeader = function(browsers) {
 		this.writeCommonMsg(strmul(' ', specLength));
-		this.writeCommonMsg(' all  ');
+		if (overviewColumn) {
+			this.writeCommonMsg(' all  ');
+		}
 		browsers.forEach(function(browser, i) {
 			this.writeCommonMsg(' '+  i + ' ');
 		}, this);
@@ -150,9 +153,11 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			}
 
 			this.printSpecLabel(sr.spec);
-			this.writeCommonMsg(' ');
-			this.printResultLabel(summary);
-			this.writeCommonMsg('  ');
+			if (overviewColumn) {
+				this.writeCommonMsg(' ');
+				this.printResultLabel(summary);
+				this.writeCommonMsg('  ');
+			}
 			browsers.forEach(function(browser, i) {
 				this.printResultLabel(sr.results[browser.id], i);
 			}, this);

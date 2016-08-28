@@ -87,7 +87,8 @@ module.exports = function(config) {
          // 'failed', 'skipped' or 'all'
          show: 'failed',
          // Limit the spec label to this length
-         specLength: 50
+         specLength: 50,
+         overviewColumn: true
       }
    });
 };
@@ -105,4 +106,11 @@ Select which tests are dislayed in the summary. There are three choices:
 
 Space reserved to display the spec label (width of the first column in
 the results table).
+
+### overviewColumn
+
+Shows a overview column in the results table, showing the total result of
+a test over all browsers ("failed" if the test failed anywhere, ...). In
+the above examples this is the column with the "all" header. Setting this
+option to `false` disables this column.
 
