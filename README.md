@@ -5,7 +5,7 @@ of a test run. This gives a better overview which browsers are broken than the
 output of other reporters.
 
 The plugin is intended to be used in addition to some other reporter that
-shows you the error details. This plugin only shows a overview of passed and
+shows you the error details. This plugin only shows an overview of passed and
 failed testcases, no more detailed information:
 
 ```
