@@ -122,26 +122,32 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 		specorder.forEach(function(specid) {
 			var sr = specresults[specid];
 			// Collect information from all browsers
-			var summary = { partial: false, skipped: true, success: true };
+			var summary = { skipped_some: false, ran_some: false, success: true };
 			browsers.forEach(function(b) {
 				if (sr.results[b.id]) {
-					summary.partial = summary.partial || sr.results[b.id].skipped;
-					summary.skipped = summary.skipped && sr.results[b.id].skipped;
-					summary.success = summary.success && sr.results[b.id].success;
+					if (sr.results[b.id].skipped) {
+						summary.skipped_some = true;
+					}
+					else {
+						summary.ran_some = true;
+						summary.success = summary.success && sr.results[b.id].success;
+					}
 				}
 				else {
-					summary.partial = true;
+					summary.skipped_some = true;
 				}
 			});
 
 			if (summary.success) {
 				// Maybe we don't even want to show it
 				if (show == 'failed') {
-					counts.hidden++;
+					if (summary.ran_some)
+						counts.hidden++;
 					return;
 				}
-				if (show == 'skipped' && !summary.partial) {
-					counts.hidden++;
+				if (show == 'skipped' && !summary.skipped_some) {
+					if (summary.ran_some)
+						counts.hidden++;
 					return;
 				}
 			}
