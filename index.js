@@ -111,7 +111,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 		}, this);
 
 		if (!specorder.length) {
-			this.writeCommonMsg('No tests did run in any browsers.');
+			this.writeCommonMsg(red('No tests did run in any browsers.'));
 			return;
 		}
 
