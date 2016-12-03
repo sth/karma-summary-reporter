@@ -1,6 +1,6 @@
 {
   "name": "karma-summary-reporter",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Displays a summary of tested browsers and failed testcases after a test run.",
   "main": "index.js",
   "scripts": {

@@ -19,7 +19,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	var overviewColumn = config.summaryReporter.overviewColumn === false ? false : true;
 
 	// We use our own instance, respecting config.color
-	var chalk = new chalk_global.constructor({enabled: config.color});
+	var chalk = new chalk_global.constructor({enabled: config.colors});
 
 	var specorder, specresults;
 
