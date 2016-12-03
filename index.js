@@ -1,4 +1,6 @@
 
+var chalk_global = require('chalk');
+
 function strmul(s, n) {
 	var r = '';
 	for (var i = 0; i < n; ++i) {
@@ -16,10 +18,8 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	var specLength = config.summaryReporter.specLength || 50;
 	var overviewColumn = config.summaryReporter.overviewColumn === false ? false : true;
 
-	function green(s) { return (config.colors ? s.green : s); }
-	function yellow(s) { return (config.colors ? s.yellow : s); }
-	function red(s) { return (config.colors ? s.red : s); }
-	function bold(s) { return (config.colors ? s.bold : s); }
+	// We use our own instance, respecting config.color
+	var chalk = new chalk_global.constructor({enabled: config.color});
 
 	var specorder, specresults;
 
@@ -70,17 +70,17 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 
 	this.printResultLabel = function(result) {
 		if (result === undefined)
-			this.writeCommonMsg(yellow(' ? '));
+			this.writeCommonMsg(chalk.yellow(' ? '));
 		else if (result.skipped)
-			this.writeCommonMsg(yellow(' - '));
+			this.writeCommonMsg(chalk.yellow(' - '));
 		else if (result.success) {
 			if (!result.partial)
-				this.writeCommonMsg(green(' ✓ '));
+				this.writeCommonMsg(chalk.green(' ✓ '));
 			else
-				this.writeCommonMsg(yellow('(✓)'));
+				this.writeCommonMsg(chalk.yellow('(✓)'));
 		}
 		else {
-			this.writeCommonMsg(red(' ✗ '));
+			this.writeCommonMsg(chalk.red(' ✗ '));
 		}
 	};
 
@@ -103,7 +103,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	}
 
 	this.onRunComplete = function(browsers, results) {
-		this.writeCommonMsg(bold('SUMMARY') + '\n');
+		this.writeCommonMsg(chalk.bold(chalk.underline('SUMMARY')) + '\n');
 
 		// Browser overview
 		browsers.forEach(function(browser, i) {
@@ -111,7 +111,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 		}, this);
 
 		if (!specorder.length) {
-			this.writeCommonMsg(red('No tests did run in any browsers.'));
+			this.writeCommonMsg(chalk.red('No tests did run in any browsers.'));
 			return;
 		}
 
@@ -172,7 +172,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 		}, this);
 
 		if (counts.hidden) {
-			this.writeCommonMsg("  " + green(''+counts.hidden) +
+			this.writeCommonMsg("  " + chalk.green(''+counts.hidden) +
 				(counts.shown ? " more" : "") +
 				" test cases successful in all browsers\n")
 		}
