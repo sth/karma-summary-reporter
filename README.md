@@ -54,7 +54,7 @@ module.exports = function(config) {
 
 ### show
 
-Select which tests are dislayed in the summary. There are three choices:
+Select which tests are displayed in the summary. There are three choices:
 
 - `'failed'`: Only show tests that failed in some browser (default)
 - `'skipped'`: Additionally show tests that got skipped in some browser
@@ -71,4 +71,25 @@ Shows a overview column in the results table, showing the total result of
 a test over all browsers ("failed" if the test failed anywhere, ...). In
 the above examples this is the column with the "all" header. Setting this
 option to `false` disables this column.
+
+## Test failure details
+
+This reporter just shows a summary of failed test cases once testing is
+complete, it doesn't show stack traces or other details about the failures.
+
+To display these details, add an additional reporter to your `karma.conf.js`
+that shows all the additional information you want to see. For example, to
+run the summary reporter in addition to the `spec` reporter you'd have this
+configuration:
+
+    reporters: ['spec', 'summary']
+
+Or with [`karma-mocha-reporter`][1]:
+
+    reporters: ['mocha', 'summary']
+    mochaReporter: { output: 'minimal' }
+
+
+[1]: https://github.com/litixsoft/karma-mocha-reporter
+
 
