@@ -75,7 +75,8 @@ option to `false` disables this column.
 ## Test failure details
 
 This reporter just shows a summary of failed test cases once testing is
-complete, it doesn't show stack traces or other details about the failures.
+complete, it doesn't show stack traces or other useful information about
+the failures.
 
 To display these details, add an additional reporter to your `karma.conf.js`
 that shows all the additional information you want to see. For example, to
@@ -84,7 +85,7 @@ configuration:
 
     reporters: ['spec', 'summary']
 
-Or with [`karma-mocha-reporter`][1]:
+Or with [`karma-mocha-reporter`][1] your config could look like this:
 
     reporters: ['mocha', 'summary']
     mochaReporter: { output: 'minimal' }
