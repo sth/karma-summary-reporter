@@ -37,7 +37,7 @@ We can see that IE is lacking some features here.
 
 ## Config
 
-```
+```javascript
 module.exports = function(config) {
    config.set({
       reporters: ['progress', 'summary'],
@@ -83,13 +83,16 @@ that shows all the additional information you want to see. For example, to
 run the summary reporter in addition to the `spec` reporter you'd have this
 configuration:
 
-    reporters: ['spec', 'summary']
+```javascript
+reporters: ['spec', 'summary']
+```
 
 Or with [`karma-mocha-reporter`][1] your config could look like this:
 
-    reporters: ['mocha', 'summary']
-    mochaReporter: { output: 'minimal' }
-
+```javascript
+reporters: ['mocha', 'summary']
+mochaReporter: { output: 'minimal' }
+```
 
 [1]: https://github.com/litixsoft/karma-mocha-reporter
 
