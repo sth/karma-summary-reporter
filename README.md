@@ -35,6 +35,16 @@ feature tests, like checking which standard string functions are available:
 
 We can see that IE is lacking some features here.
 
+## Installation
+
+With npm:
+
+    npm install --save-dev karma-summary-reporter
+
+With yarn:
+
+    yarn add --dev karma-summary-reporter
+
 ## Config
 
 ```javascript
