@@ -1,5 +1,6 @@
 
 var chalk_global = require('chalk');
+var log_symbols = require('log-symbols');
 
 function strmul(s, n) {
 	var r = '';
@@ -75,12 +76,12 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			this.writeCommonMsg(chalk.yellow(' - '));
 		else if (result.success) {
 			if (!result.partial)
-				this.writeCommonMsg(chalk.green(' ✓ '));
+				this.writeCommonMsg(chalk.green(' ' +  log_symbols.success + ' '));
 			else
-				this.writeCommonMsg(chalk.yellow('(✓)'));
+				this.writeCommonMsg(chalk.yellow('(' +  log_symbols.success + ')'));
 		}
 		else {
-			this.writeCommonMsg(chalk.red(' ✗ '));
+			this.writeCommonMsg(chalk.red(' ' + log_symbols.error + ' '));
 		}
 	};
 
