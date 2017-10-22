@@ -1,6 +1,10 @@
 
 var chalk_global = require('chalk');
 
+var symbol = process.platform === 'win32'
+	? {tick: '√', cross: '×'}
+	: {tick: '✔', cross: '✖'};
+
 function strmul(s, n) {
 	var r = '';
 	for (var i = 0; i < n; ++i) {
@@ -75,12 +79,12 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			this.writeCommonMsg(chalk.yellow(' - '));
 		else if (result.success) {
 			if (!result.partial)
-				this.writeCommonMsg(chalk.green(' ✓ '));
+				this.writeCommonMsg(chalk.green(' ' +  symbol.tick + ' '));
 			else
-				this.writeCommonMsg(chalk.yellow('(✓)'));
+				this.writeCommonMsg(chalk.yellow('(' +  symbol.tick + ')'));
 		}
 		else {
-			this.writeCommonMsg(chalk.red(' ✗ '));
+			this.writeCommonMsg(chalk.red(' ' + symbol.cross + ' '));
 		}
 	};
 
