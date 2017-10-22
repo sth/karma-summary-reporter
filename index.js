@@ -1,6 +1,9 @@
 
 var chalk_global = require('chalk');
-var log_symbols = require('log-symbols');
+
+var symbol = process.platform === 'win32'
+	? {tick: '√', cross: '×'}
+	: {tick: '✔', cross: '✖'};
 
 function strmul(s, n) {
 	var r = '';
@@ -76,12 +79,12 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			this.writeCommonMsg(chalk.yellow(' - '));
 		else if (result.success) {
 			if (!result.partial)
-				this.writeCommonMsg(chalk.green(' ' +  log_symbols.success + ' '));
+				this.writeCommonMsg(chalk.green(' ' +  symbol.tick + ' '));
 			else
-				this.writeCommonMsg(chalk.yellow('(' +  log_symbols.success + ')'));
+				this.writeCommonMsg(chalk.yellow('(' +  symbol.tick + ')'));
 		}
 		else {
-			this.writeCommonMsg(chalk.red(' ' + log_symbols.error + ' '));
+			this.writeCommonMsg(chalk.red(' ' + symbol.cross + ' '));
 		}
 	};
 
