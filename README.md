@@ -56,6 +56,7 @@ module.exports = function(config) {
          show: 'failed',
          // Limit the spec label to this length
          specLength: 50,
+         // Show an 'all' column as a summary
          overviewColumn: true
       }
    });
