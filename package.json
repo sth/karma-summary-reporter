@@ -9,7 +9,7 @@
   "author": "Stephan Hohe <sth.dev@tejp.de>",
   "license": "MIT",
   "peerDependencies": {
-    "karma": "^1.2.0"
+    "karma": "^1.2.0 || 2.x"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/sth/karma-summary-reporter#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.0.2"
+    "chai": "^3.5.0 || 4.x",
+    "mocha": "^3.0.2 || 4.x || 5.x"
   },
   "dependencies": {
-    "chalk": "^1.1.3"
+    "chalk": "^1.1.3 || 2.x"
   }
 }
