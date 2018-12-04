@@ -94,7 +94,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			this.writeCommonMsg(' all  ');
 		}
 		browsers.forEach(function(browser, i) {
-			this.writeCommonMsg(' '+  i + ' ');
+			this.writeCommonMsg((i < 10 && ' ') +  i + ' ');
 		}, this);
 		this.writeCommonMsg('\n');
 	}
