@@ -161,4 +161,19 @@ describe('Summary reporter', function () {
 			chai.assert.doesNotThrow(function() { reporter.specSuccess(b1, {}); });
 		});
 	});
+
+	describe("many browsers", function() {
+		beforeEach(function() {
+			setupReporter({});
+		});
+
+		it ('should format >10 browsers correctly', function() {
+			reporter.printTableHeader(new Array(20).fill(undefined));
+			chai.assert.isTrue(
+				writeOutput.includes(
+				' 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19'),
+				'formats the header correctly');
+		});
+	});
+
 });
