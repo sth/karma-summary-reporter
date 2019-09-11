@@ -4,6 +4,10 @@
 
 - Nothing yet
 
+## [v1.7.1](https://github.com/sth/karma-summary-reporter/tree/v1.7.1) (11.09.2019) ([diff](https://github.com/sth/karma-summary-reporter/compare/v1.7.0...v1.7.1))
+
+- **Improvement:** Include updated changelog
+
 ## [v1.7.0](https://github.com/sth/karma-summary-reporter/tree/v1.7.0) (11.09.2019) ([diff](https://github.com/sth/karma-summary-reporter/compare/v1.6.0...v1.7.0))
 
 - **Feature:** Support mocha 6.x
