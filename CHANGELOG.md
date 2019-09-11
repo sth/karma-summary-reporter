@@ -1,6 +1,6 @@
 # Changelog
 <a name="master"></a>
-## [HEAD](https://github.com/sth/karma-summary-reporter/tree/master) (unreleased) ([diff](https://github.com/sth/karma-summary-reporter/compare/v1.7.0...master))
+## [HEAD](https://github.com/sth/karma-summary-reporter/tree/master) (unreleased) ([diff](https://github.com/sth/karma-summary-reporter/compare/v1.7.1...master))
 
 - Nothing yet
 
