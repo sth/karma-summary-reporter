@@ -16,6 +16,6 @@
     "karma-chai": "^0.1.0",
     "karma-mocha": "^1.3.0",
     "karma-summary-reporter": "^1.3.3",
-    "mocha": "^5.0.0"
+    "mocha": "^6.2.0"
   }
 }
