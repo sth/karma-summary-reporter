@@ -22,7 +22,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	var specLength = config.summaryReporter.specLength || 50;
 	var overviewColumn = config.summaryReporter.overviewColumn === false ? false : true;
 
-	// We use our own instance, respecting config.color
+	// We use our own instance, respecting config.colors
 	var chalk = new chalk_global.constructor({enabled: config.colors});
 
 	var specorder, specresults;
