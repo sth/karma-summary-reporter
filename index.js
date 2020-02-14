@@ -25,9 +25,14 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	// We use our own instance, respecting config.colors
 	var chalk = new chalk_global.constructor({enabled: config.colors});
 
+	var runStarted = false;
 	var specorder, specresults;
 
 	this.specSuccess = this.specFailure = this.specSkipped = function(browser, result) {
+		if (!runStarted) {
+			return;
+		}
+
 		if (!result.suite) {
 			return;
 		}
@@ -100,6 +105,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	}
 
 	this.onRunStart = function() {
+		runStarted = true;
 		this._browsers = [];
 		currentPath = [];
 		specorder = [];
@@ -107,6 +113,14 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	}
 
 	this.onRunComplete = function(browsers, results) {
+		if (!runStarted) {
+			// For example when there are compilation errors, onRunComplete might get called
+			// even before a proper run was started.
+			// We don't report a summary for such events.
+			return;
+		}
+		runStarted = false;
+
 		this.writeCommonMsg(chalk.bold(chalk.underline('SUMMARY')) + '\n');
 
 		// Browser overview
