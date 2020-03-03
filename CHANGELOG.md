@@ -1,6 +1,6 @@
 # Changelog
 <a name="master"></a>
-## [HEAD](https://github.com/sth/karma-summary-reporter/tree/HEAD), 2020-03-01 ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...HEAD))
+## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...master))
 
 - Updated changelog format
 
