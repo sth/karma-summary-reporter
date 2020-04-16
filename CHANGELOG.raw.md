@@ -1,9 +1,14 @@
 # Changelog
 
+<a name="1.8.0"></a>
+## [1.8.0](https://github.com/sth/karma-summary-reporter/tree/1.8.0), 2020-04-16 ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...1.8.0))
 
-<a name="master"></a>
-## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...master))
-
+* Upgrade dependencies used in examples ([4e49b1d](https://github.com/sth/karma-summary-reporter/commit/4e49b1df7e4421fe38006063b25c9265b59314d0))
+* Add karma 5.x to peer dependencies ([0ed1b3d](https://github.com/sth/karma-summary-reporter/commit/0ed1b3dfccfa7514e62ef37adfab94e9a3b2614f))
+* Minor upgrade of devDependencies ([dfc4567](https://github.com/sth/karma-summary-reporter/commit/dfc45677eaaaa227a3457f18b96c946ed6e3e4b5))
+* Upgrade devDependencies ([ab3153e](https://github.com/sth/karma-summary-reporter/commit/ab3153ea38c7f15fd00f9c9e4dfd4a49b92bf989))
+* Simpler Changelog ([12f011a](https://github.com/sth/karma-summary-reporter/commit/12f011a135c0e23ea4f005c1513e2319bf4d4480))
+* Improve changelog generation ([1454890](https://github.com/sth/karma-summary-reporter/commit/14548905d7100ea740e63fee6b39d3b5657adba5))
 * Improve changelog format ([dc12d67](https://github.com/sth/karma-summary-reporter/commit/dc12d671678326146065fa8b548cf1443a62ee31))
 * Update changelog for v1.7.2; Improve changelog format ([de7848a](https://github.com/sth/karma-summary-reporter/commit/de7848a3cfc6c7e8d734002e7852f61d517378e6))
 

@@ -1,8 +1,11 @@
 # Changelog
-<a name="master"></a>
-## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...master))
 
-- Updated changelog format
+<a name="1.8.0"></a>
+## [1.8.0](https://github.com/sth/karma-summary-reporter/tree/1.8.0), 2020-04-16 ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...1.8.0))
+
+- **Feature**: Compatibility with karma v5
+- **Improvement**: Improved changelog format
+- **Improvement (dev)**: Dev dependency upgrades (**including security fixes**)
 
 <a name="v1.7.2"></a>
 ## [v1.7.2](https://github.com/sth/karma-summary-reporter/tree/v1.7.2), 2020-02-14 ([compare to v1.7.1](https://github.com/sth/karma-summary-reporter/compare/v1.7.1...v1.7.2))
