@@ -6,8 +6,8 @@ jobs:
     name: Run tests
     strategy:
       matrix:
-        os: [ubuntu-18.04]
-        node: [8, 10, 12, 13]
+        os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
+        node: [8, 10, 12, 14]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v1
