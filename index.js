@@ -28,7 +28,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	var runStarted = false;
 	var specorder, specresults;
 
-	this.specSuccess = this.specFailure = this.specSkipped = function(browser, result) {
+	this.onSpecComplete = function(browser, result) {
 		if (!runStarted) {
 			return;
 		}
@@ -195,6 +195,13 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 				" test cases successful in all browsers\n")
 		}
 	};
+
+	this.onBrowserLog = function(browser, log, type) {
+		// We don't show any log messages.
+	}
+	this.onBrowserError = function(browser, error) {
+		// We don't show any log messages.
+	}
 }
 
 SummaryReporter.$inject = [
