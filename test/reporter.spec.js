@@ -50,30 +50,30 @@ describe('Summary reporter', function () {
 	function runFakeTests() {
 		reporter.onRunStart([b1, b2]);
 
-		reporter.specSuccess(b1, resultSuccess(1));
-		reporter.specSuccess(b2, resultSuccess(1));
+		reporter.onSpecComplete(b1, resultSuccess(1));
+		reporter.onSpecComplete(b2, resultSuccess(1));
 
-		reporter.specFailure(b1, resultFailed(2));
-		reporter.specFailure(b2, resultFailed(2));
+		reporter.onSpecComplete(b1, resultFailed(2));
+		reporter.onSpecComplete(b2, resultFailed(2));
 
-		reporter.specSkipped(b1, resultSkipped(3));
-		reporter.specSkipped(b2, resultSkipped(3));
+		reporter.onSpecComplete(b1, resultSkipped(3));
+		reporter.onSpecComplete(b2, resultSkipped(3));
 
-		reporter.specSuccess(b1, resultSuccess(4));
-		reporter.specFailure(b2, resultFailed(4));
+		reporter.onSpecComplete(b1, resultSuccess(4));
+		reporter.onSpecComplete(b2, resultFailed(4));
 
-		reporter.specSuccess(b1, resultSuccess(5));
-		reporter.specSkipped(b2, resultSkipped(5));
+		reporter.onSpecComplete(b1, resultSuccess(5));
+		reporter.onSpecComplete(b2, resultSkipped(5));
 
-		reporter.specFailure(b1, resultFailed(6));
-		reporter.specSkipped(b2, resultSkipped(6));
+		reporter.onSpecComplete(b1, resultFailed(6));
+		reporter.onSpecComplete(b2, resultSkipped(6));
 
 		reporter.onRunComplete([b1, b2])
 
 		reporter.onRunStart([b1, b2, b3]);
-		reporter.specSuccess(b1, resultSuccess(7));
-		reporter.specFailure(b2, resultFailed(7));
-		reporter.specSkipped(b3, resultFailed(7));
+		reporter.onSpecComplete(b1, resultSuccess(7));
+		reporter.onSpecComplete(b2, resultFailed(7));
+		reporter.onSpecComplete(b3, resultFailed(7));
 		reporter.onRunComplete([b1, b2, b3])
 	}
 
@@ -158,7 +158,7 @@ describe('Summary reporter', function () {
 
 		it('should safely handle missing suite browser entries when specSuccess fires', function () {
 			reporter.onRunStart([b1])
-			chai.assert.doesNotThrow(function() { reporter.specSuccess(b1, {}); });
+			chai.assert.doesNotThrow(function() { reporter.onSpecComplete(b1, {success: true}); });
 		});
 	});
 
