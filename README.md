@@ -63,6 +63,9 @@ module.exports = function(config) {
 };
 ```
 
+This configures Karma to run this `summary` reporter in addition to the Karma
+default `progress` reporter.
+
 ### show
 
 Select which tests are displayed in the summary. There are three choices:
@@ -101,8 +104,15 @@ reporters: ['spec', 'summary']
 Or with [`karma-mocha-reporter`][1] your config could look like this:
 
 ```javascript
-reporters: ['mocha', 'summary']
+reporters: ['mocha', 'summary'],
 mochaReporter: { output: 'minimal' }
+```
+
+Karma's default reporter is called `progress`, so if you just want to extend
+that it would look like this:
+
+```javascript
+reporters: ['progress', 'summary']
 ```
 
 [1]: https://github.com/litixsoft/karma-mocha-reporter
