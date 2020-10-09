@@ -1,7 +1,16 @@
 # Changelog
 
-<a name="1.8.0"></a>
-## [1.8.0](https://github.com/sth/karma-summary-reporter/tree/1.8.0), 2020-04-16 ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...1.8.0))
+<a name="v1.9.0"></a>
+## [v1.9.0](https://github.com/sth/karma-summary-reporter/tree/v1.9.0), 2020-10-09 ([compare to v1.8.0](https://github.com/sth/karma-summary-reporter/compare/v1.8.0...v1.9.0))
+
+- **Improvement**: Remove browser messages that lead to duplicate output when combined with other reporters (#15)
+- **Improvement (dev)**: Dev dependency upgrades (**including security fixes**)
+- **Compatibility**: Remove CI testing for node v6
+- **Compatibility**: Add CI testing for node v14
+- **Compatibility**: Add CI testing on windows, macos
+
+<a name="v1.8.0"></a>
+## [v1.8.0](https://github.com/sth/karma-summary-reporter/tree/v1.8.0), 2020-04-16 ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...v1.8.0))
 
 - **Feature**: Compatibility with karma v5
 - **Improvement**: Improved changelog format

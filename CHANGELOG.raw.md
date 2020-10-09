@@ -1,8 +1,25 @@
 # Changelog
 
-<a name="1.8.0"></a>
-## [1.8.0](https://github.com/sth/karma-summary-reporter/tree/1.8.0), 2020-04-16 ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...1.8.0))
+<a name="v1.9.0"></a>
+## [v1.9.0](https://github.com/sth/karma-summary-reporter/tree/v1.9.0), 2020-10-09 ([compare to v1.8.0](https://github.com/sth/karma-summary-reporter/compare/v1.8.0...v1.9.0))
 
+* Adjust tests to use onSpecComplete() ([8bbad32](https://github.com/sth/karma-summary-reporter/commit/8bbad32853fb52176d2405c4dfd688e3879d3df6))
+* Mention that Karma's default reporter is `progress` ([477c351](https://github.com/sth/karma-summary-reporter/commit/477c3512ad031ef59844dd9ec357c7f7e6ec3d64))
+* Don't show browser log and other messages ([f5c425a](https://github.com/sth/karma-summary-reporter/commit/f5c425a9b8654f35f7af43f6feba04af4c601fe7))
+* Merge pull request [#14](https://github.com/sth/karma-summary-reporter/issues/14) from sth/dependabot/npm_and_yarn/examples/http-proxy-1.18.1 ([574f5c5](https://github.com/sth/karma-summary-reporter/commit/574f5c592d1d38e83d1ddc638adc923639799aab))
+* Bump http-proxy from 1.18.0 to 1.18.1 in /examples ([e18c47b](https://github.com/sth/karma-summary-reporter/commit/e18c47b61dc6e84a28226d68b21304100c7da334))
+* Merge pull request [#12](https://github.com/sth/karma-summary-reporter/issues/12) from sth/dependabot/npm_and_yarn/examples/lodash-4.17.19 ([9bf14ec](https://github.com/sth/karma-summary-reporter/commit/9bf14ec74f663f9310924f781d0ef0a4ec405ace))
+* Merge pull request [#13](https://github.com/sth/karma-summary-reporter/issues/13) from sth/dependabot/npm_and_yarn/lodash-4.17.19 ([c2f19d0](https://github.com/sth/karma-summary-reporter/commit/c2f19d089cb19231d1df602add6cdc9f548b04c3))
+* Bump lodash from 4.17.15 to 4.17.19 in /examples ([8d47e35](https://github.com/sth/karma-summary-reporter/commit/8d47e350837c8e67953740c685ed0961ec490a6f))
+* Bump lodash from 4.17.15 to 4.17.19 ([a6d3ec8](https://github.com/sth/karma-summary-reporter/commit/a6d3ec874593253979bd0db6faa1868ea2933369))
+* Add more variants to Github Actions tests ([4be6576](https://github.com/sth/karma-summary-reporter/commit/4be65767fb1596a7b157b111a7bc5b4a7a30eda9))
+* Remove testing for node v6, add for node v13 ([95efa96](https://github.com/sth/karma-summary-reporter/commit/95efa9611c5a2e253cbe42664eb7f72b7435aa1c))
+
+<a name="v1.8.0"></a>
+## [v1.8.0](https://github.com/sth/karma-summary-reporter/tree/v1.8.0), 2020-04-16 ([compare to v1.7.2](https://github.com/sth/karma-summary-reporter/compare/v1.7.2...v1.8.0))
+
+* v1.8.0 ([7fb791d](https://github.com/sth/karma-summary-reporter/commit/7fb791d21ce89fecb7e0e25a04f533e76d5c6c3a))
+* Update changelog ([65ee5f8](https://github.com/sth/karma-summary-reporter/commit/65ee5f877e4cec180c96f892b5f18e4a7bffe9ae))
 * Upgrade dependencies used in examples ([4e49b1d](https://github.com/sth/karma-summary-reporter/commit/4e49b1df7e4421fe38006063b25c9265b59314d0))
 * Add karma 5.x to peer dependencies ([0ed1b3d](https://github.com/sth/karma-summary-reporter/commit/0ed1b3dfccfa7514e62ef37adfab94e9a3b2614f))
 * Minor upgrade of devDependencies ([dfc4567](https://github.com/sth/karma-summary-reporter/commit/dfc45677eaaaa227a3457f18b96c946ed6e3e4b5))
