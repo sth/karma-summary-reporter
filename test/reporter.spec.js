@@ -35,9 +35,9 @@ describe('Summary reporter', function () {
 
 	var writeOutput;
 
-	var b1 = { id: 'b1' };
-	var b2 = { id: 'b2' };
-	var b3 = { id: 'b3' };
+	var b1 = { id: 'browser1' };
+	var b2 = { id: 'browser2' };
+	var b3 = { id: 'browser3' };
 
 	function setupReporter(fakeConfig) {
 		writeOutput = '';
@@ -77,7 +77,7 @@ describe('Summary reporter', function () {
 		reporter.onRunComplete([b1, b2, b3])
 	}
 
-	describe("`show` config option", function() {
+	describe("config option `show`", function() {
 		it("displays correctly for show=failed", function() {
 			setupReporter({
 				summaryReporter: {
@@ -151,6 +151,193 @@ describe('Summary reporter', function () {
 		});
 	});
 
+	describe("config option `browserList`", function() {
+		describe("browserList=always", function() {
+			beforeEach(function() {
+				setupReporter({
+					summaryReporter: {
+						show: 'failed',
+						browserList: 'always'
+					}
+				});
+			});
+
+			it("shows browser list", function() {
+				reporter.onRunStart([b1]);
+				reporter.onSpecComplete(b1, resultSuccess(1));
+				reporter.onRunComplete([b1])
+
+				chai.assert.isTrue(writeOutput.includes("browser1"),
+						"shows browser1 label");
+			});
+		});
+
+		describe("browserList=ifneeded", function() {
+			describe("with show=all", function() {
+				beforeEach(function() {
+					setupReporter({
+						summaryReporter: {
+							show: 'all',
+							browserList: 'ifneeded'
+						}
+					});
+				});
+
+				it("doesn't show browser list when there is only one browser", function() {
+					reporter.onRunStart([b1]);
+					reporter.onSpecComplete(b1, resultSuccess(1));
+					reporter.onSpecComplete(b2, resultSkipped(1));
+					reporter.onSpecComplete(b2, resultFailed(1));
+					reporter.onRunComplete([b1])
+
+					chai.assert.isFalse(writeOutput.includes("browser1"),
+							"doesn't show browser1 label");
+				});
+
+				it("shows browser list when there are multiple browsers", function() {
+					reporter.onRunStart([b1, b2]);
+					reporter.onSpecComplete(b1, resultSuccess(1));
+					reporter.onSpecComplete(b2, resultSuccess(1));
+					reporter.onRunComplete([b1, b2])
+
+					chai.assert.isTrue(writeOutput.includes("browser1"),
+							"shows browser1 label");
+					chai.assert.isTrue(writeOutput.includes("browser2"),
+							"shows browser2 label");
+				});
+			});
+
+			describe("with show=failed", function() {
+				beforeEach(function() {
+					setupReporter({
+						summaryReporter: {
+							show: 'failed',
+							browserList: 'ifneeded'
+						}
+					});
+				});
+
+				it("doesn't show browser list when there is only one browser", function() {
+					reporter.onRunStart([b1]);
+					reporter.onSpecComplete(b1, resultSuccess(1));
+					reporter.onSpecComplete(b1, resultSkipped(2));
+					reporter.onSpecComplete(b1, resultFailed(3));
+					reporter.onRunComplete([b1])
+
+					chai.assert.isFalse(writeOutput.includes("browser1"),
+							"doesn't show browser1 label");
+				});
+
+				it("doesn't show browser list when there are no failures", function() {
+					reporter.onRunStart([b1, b2]);
+					reporter.onSpecComplete(b1, resultSuccess(1));
+					reporter.onSpecComplete(b2, resultSkipped(1));
+					reporter.onRunComplete([b1, b2])
+
+					chai.assert.isFalse(writeOutput.includes("browser1"),
+							"doesn't show browser1 label");
+					chai.assert.isFalse(writeOutput.includes("browser2"),
+							"doesn't show browser2 label");
+				});
+
+				it("shows browser list when there are multiple browsers and failures", function() {
+					reporter.onRunStart([b1, b2]);
+					reporter.onSpecComplete(b1, resultSuccess(1));
+					reporter.onSpecComplete(b2, resultFailed(1));
+					reporter.onRunComplete([b1, b2])
+
+					chai.assert.isTrue(writeOutput.includes("browser1"),
+							"shows browser1 label");
+					chai.assert.isTrue(writeOutput.includes("browser2"),
+							"shows browser2 label");
+				});
+			});
+
+			describe("with show=skipped", function() {
+				beforeEach(function() {
+					setupReporter({
+						summaryReporter: {
+							show: 'skipped',
+							browserList: 'ifneeded'
+						}
+					});
+				});
+
+				it("doesn't show browser list when there is only one browser", function() {
+					reporter.onRunStart([b1]);
+					reporter.onSpecComplete(b1, resultSuccess(1));
+					reporter.onSpecComplete(b1, resultSkipped(2));
+					reporter.onSpecComplete(b1, resultFailed(3));
+					reporter.onRunComplete([b1])
+
+					chai.assert.isFalse(writeOutput.includes("browser1"),
+							"doesn't show browser1 label");
+				});
+
+				it("doesn't show browser list when there are no failures or skips", function() {
+					reporter.onRunStart([b1, b2]);
+					reporter.onSpecComplete(b1, resultSuccess(1));
+					reporter.onSpecComplete(b2, resultSuccess(1));
+					reporter.onRunComplete([b1, b2])
+
+					chai.assert.isFalse(writeOutput.includes("browser1"),
+							"doesn't show browser1 label");
+					chai.assert.isFalse(writeOutput.includes("browser2"),
+							"doesn't show browser2 label");
+				});
+
+				it("shows browser list when there are multiple browsers and skips", function() {
+					reporter.onRunStart([b1, b2]);
+					reporter.onSpecComplete(b1, resultSuccess(1));
+					reporter.onSpecComplete(b2, resultSkipped(1));
+					reporter.onRunComplete([b1, b2])
+
+					chai.assert.isTrue(writeOutput.includes("browser1"),
+							"shows browser1 label");
+					chai.assert.isTrue(writeOutput.includes("browser2"),
+							"shows browser2 label");
+				});
+
+				it("shows browser list when there are multiple browsers and failures", function() {
+					reporter.onRunStart([b1, b2]);
+					reporter.onSpecComplete(b1, resultSuccess(1));
+					reporter.onSpecComplete(b2, resultFailed(1));
+					reporter.onRunComplete([b1, b2])
+
+					chai.assert.isTrue(writeOutput.includes("browser1"),
+							"shows browser1 label");
+					chai.assert.isTrue(writeOutput.includes("browser2"),
+							"shows browser2 label");
+				});
+			});
+		});
+
+		describe("browserList=never", function() {
+			beforeEach(function() {
+				setupReporter({
+					summaryReporter: {
+						show: 'all',
+						browserList: 'never'
+					}
+				});
+			});
+
+			it("doesn't show browser list", function() {
+				reporter.onRunStart([b1, b2]);
+				reporter.onSpecComplete(b1, resultSuccess(1));
+				reporter.onSpecComplete(b2, resultFailed(1));
+				reporter.onSpecComplete(b1, resultFailed(2));
+				reporter.onSpecComplete(b2, resultSkipped(2));
+				reporter.onRunComplete([b1, b2])
+
+				chai.assert.isFalse(writeOutput.includes("browser1"),
+						"doesn't show browser1 label");
+				chai.assert.isFalse(writeOutput.includes("browser2"),
+						"doesn't show browser2 label");
+			});
+		});
+	});
+
 	describe("unexpected input", function() {
 		beforeEach(function() {
 			setupReporter({});
@@ -167,7 +354,7 @@ describe('Summary reporter', function () {
 			setupReporter({});
 		});
 
-		it ('should format >10 browsers correctly', function() {
+		it('should format >10 browsers correctly', function() {
 			reporter.printTableHeader(new Array(20).fill(undefined));
 			chai.assert.isTrue(
 				writeOutput.includes(
@@ -175,5 +362,4 @@ describe('Summary reporter', function () {
 				'formats the header correctly');
 		});
 	});
-
 });

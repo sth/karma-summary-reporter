@@ -21,6 +21,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	var show = config.summaryReporter.show || 'failed';
 	var specLength = config.summaryReporter.specLength || 50;
 	var overviewColumn = config.summaryReporter.overviewColumn === false ? false : true;
+	var browserList = config.summaryReporter.browserList || 'always';
 
 	// We use our own instance, respecting config.colors
 	var chalk = new chalk_global.constructor({enabled: config.colors});
@@ -102,7 +103,13 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			this.writeCommonMsg((i < 10 ? ' ' : '') +  i + ' ');
 		}, this);
 		this.writeCommonMsg('\n');
-	}
+	};
+
+	this.printBrowserList = function(browsers) {
+		browsers.forEach(function(browser, i) {
+			this.writeCommonMsg(' ' + i + ': ' + this.renderBrowser(browser) + '\n');
+		}, this);
+	};
 
 	this.onRunStart = function() {
 		runStarted = true;
@@ -110,7 +117,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 		currentPath = [];
 		specorder = [];
 		specresults = Object.create(null);
-	}
+	};
 
 	this.onRunComplete = function(browsers, results) {
 		if (!runStarted) {
@@ -121,19 +128,21 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 		}
 		runStarted = false;
 
+		var browserListShown = false;
+		var tableHeaderShown = false;
+
 		this.writeCommonMsg(chalk.bold(chalk.underline('SUMMARY')) + '\n');
 
 		// Browser overview
-		browsers.forEach(function(browser, i) {
-			this.writeCommonMsg(' ' + i + ': ' + this.renderBrowser(browser) + '\n');
-		}, this);
+		if (browserList === 'always') {
+			this.printBrowserList(browsers);
+			browserListShown = true;
+		}
 
 		if (!specorder.length) {
 			this.writeCommonMsg(chalk.red('No tests did run in any browsers.'));
 			return;
 		}
-
-		var tableHeaderShown = false;
 
 		// Test details
 		var counts = { shown: 0, hidden: 0 };
@@ -171,6 +180,11 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			}
 
 			// We want to actually display it
+			if (browserList === 'ifneeded' && browsers.length > 1 && !browserListShown) {
+				this.printBrowserList(browsers);
+				browserListShown = true;
+			}
+
 			if (!tableHeaderShown) {
 				this.printTableHeader(browsers);
 				tableHeaderShown = true;

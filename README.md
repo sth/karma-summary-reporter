@@ -57,7 +57,9 @@ module.exports = function(config) {
          // Limit the spec label to this length
          specLength: 50,
          // Show an 'all' column as a summary
-         overviewColumn: true
+         overviewColumn: true,
+			// Show a list of test clients, 'always', 'never' or 'ifneeded'
+			browserList: 'always'
       }
    });
 };
@@ -85,6 +87,14 @@ Shows a overview column in the results table, showing the total result of
 a test over all browsers ("failed" if the test failed anywhere, ...). In
 the above examples this is the column with the "all" header. Setting this
 option to `false` disables this column.
+
+### browserList
+
+Show the list of connected browsers before the result table
+
+- `'always'`: Show always (default)
+- `'ifneeded'`: Show only if there are test results shown from multiple browsers
+- `'never'`: Show never
 
 ## Test failure details
 
