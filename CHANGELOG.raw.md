@@ -1,8 +1,9 @@
 # Changelog
 
-<a name="master"></a>
-## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v1.10.0](https://github.com/sth/karma-summary-reporter/compare/v1.10.0...master))
+<a name="1.10.1"></a>
+## [1.10.1](https://github.com/sth/karma-summary-reporter/tree/1.10.1), 2021-01-13 ([compare to v1.10.0](https://github.com/sth/karma-summary-reporter/compare/v1.10.0...1.10.1))
 
+* Update changelog ([ddff0cd](https://github.com/sth/karma-summary-reporter/commit/ddff0cd86043c36bde959515a9873e844cbb5609))
 
 <a name="v1.10.0"></a>
 ## [v1.10.0](https://github.com/sth/karma-summary-reporter/tree/v1.10.0), 2021-01-13 ([compare to v1.9.0](https://github.com/sth/karma-summary-reporter/compare/v1.9.0...v1.10.0))
