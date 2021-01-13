@@ -1,8 +1,21 @@
 # Changelog
 
+<a name="master"></a>
+## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v1.10.0](https://github.com/sth/karma-summary-reporter/compare/v1.10.0...master))
+
+
+<a name="v1.10.0"></a>
+## [v1.10.0](https://github.com/sth/karma-summary-reporter/tree/v1.10.0), 2021-01-13 ([compare to v1.9.0](https://github.com/sth/karma-summary-reporter/compare/v1.9.0...v1.10.0))
+
+* v1.10.0 ([9b50e88](https://github.com/sth/karma-summary-reporter/commit/9b50e88eff95ce241173b3ffc3c14a7ebdefba18))
+* Update example to use karma v6 ([7b03798](https://github.com/sth/karma-summary-reporter/commit/7b037981b60630da1ae487c27846a3617e91f75f))
+* Add support for karma v6 ([4255b9a](https://github.com/sth/karma-summary-reporter/commit/4255b9a6309a741c40269f283555c089821e86ee))
+* Add a `browserList` config option ([6cd3506](https://github.com/sth/karma-summary-reporter/commit/6cd3506ce745c1ef9cf86a28ff740b663d83b418))
+
 <a name="v1.9.0"></a>
 ## [v1.9.0](https://github.com/sth/karma-summary-reporter/tree/v1.9.0), 2020-10-09 ([compare to v1.8.0](https://github.com/sth/karma-summary-reporter/compare/v1.8.0...v1.9.0))
 
+* v1.9.0 ([f4a363d](https://github.com/sth/karma-summary-reporter/commit/f4a363d408e9cdcefc0d8bfa5328f9a07f227ede))
 * Adjust tests to use onSpecComplete() ([8bbad32](https://github.com/sth/karma-summary-reporter/commit/8bbad32853fb52176d2405c4dfd688e3879d3df6))
 * Mention that Karma's default reporter is `progress` ([477c351](https://github.com/sth/karma-summary-reporter/commit/477c3512ad031ef59844dd9ec357c7f7e6ec3d64))
 * Don't show browser log and other messages ([f5c425a](https://github.com/sth/karma-summary-reporter/commit/f5c425a9b8654f35f7af43f6feba04af4c601fe7))

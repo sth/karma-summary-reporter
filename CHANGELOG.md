@@ -1,5 +1,11 @@
 # Changelog
 
+<a name="v1.10.0"></a>
+## [v1.10.0](https://github.com/sth/karma-summary-reporter/tree/v1.10.0), 2021-01-13 ([compare to v1.9.0](https://github.com/sth/karma-summary-reporter/compare/v1.9.0...v1.10.0))
+
+* Add support for karma v6 ([4255b9a](https://github.com/sth/karma-summary-reporter/commit/4255b9a6309a741c40269f283555c089821e86ee))
+* Add a `browserList` config option ([6cd3506](https://github.com/sth/karma-summary-reporter/commit/6cd3506ce745c1ef9cf86a28ff740b663d83b418))
+
 <a name="v1.9.0"></a>
 ## [v1.9.0](https://github.com/sth/karma-summary-reporter/tree/v1.9.0), 2020-10-09 ([compare to v1.8.0](https://github.com/sth/karma-summary-reporter/compare/v1.8.0...v1.9.0))
 
