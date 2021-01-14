@@ -1,8 +1,19 @@
 # Changelog
 
-<a name="1.10.1"></a>
-## [1.10.1](https://github.com/sth/karma-summary-reporter/tree/1.10.1), 2021-01-13 ([compare to v1.10.0](https://github.com/sth/karma-summary-reporter/compare/v1.10.0...1.10.1))
+<a name="master"></a>
+## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v1.10.1](https://github.com/sth/karma-summary-reporter/compare/v1.10.1...master))
 
+* Remove karma <= v4 from peerDependencies ([2aac290](https://github.com/sth/karma-summary-reporter/commit/2aac2909ef21e1b33b4c15e7cc37c669b6d10911))
+* Update dev dependencies ([45be247](https://github.com/sth/karma-summary-reporter/commit/45be2472582db83d4dfc786a251b2c5701be16ac))
+* Update chalk to ^4.0.0 (breaks node < v10) ([0b3998c](https://github.com/sth/karma-summary-reporter/commit/0b3998c9ba2619f623efe72b7073659e39f05239))
+* Update chalk to ^3.0.0 (breaks node < v8) ([4f573c5](https://github.com/sth/karma-summary-reporter/commit/4f573c5f83f90baaa274911d49283ce25c7e57bc))
+* Improve changelog layout ([69af193](https://github.com/sth/karma-summary-reporter/commit/69af193405ff7b4c741b32c30c583536ff485f8f))
+
+<a name="v1.10.1"></a>
+## [v1.10.1](https://github.com/sth/karma-summary-reporter/tree/v1.10.1), 2021-01-13 ([compare to v1.10.0](https://github.com/sth/karma-summary-reporter/compare/v1.10.0...v1.10.1))
+
+* v1.10.1 ([9aa45f3](https://github.com/sth/karma-summary-reporter/commit/9aa45f3456b43466ac9329f123820df17a590696))
+* Update changelog ([a7f2302](https://github.com/sth/karma-summary-reporter/commit/a7f23025fcfec89eed216bd8073afdf11ea4b54a))
 * Update changelog ([ddff0cd](https://github.com/sth/karma-summary-reporter/commit/ddff0cd86043c36bde959515a9873e844cbb5609))
 
 <a name="v1.10.0"></a>

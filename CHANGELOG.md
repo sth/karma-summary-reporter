@@ -1,5 +1,12 @@
 # Changelog
 
+<a name="2.0.0"></a>
+## [2.0.0](https://github.com/sth/karma-summary-reporter/tree/2.0.0), 2021-01-14 ([compare to v1.10.1](https://github.com/sth/karma-summary-reporter/compare/v1.10.1...2.0.0))
+
+* **Compatibility (Breaking change)**: Update chalk to ^4.0.0 (**Now requires node >= v10**)
+* **Compatibility**: Remove peerDependencies for karma <= v4
+* **Improvement**: Update dev dependencies (**Now requires node >= v10.12.0**)
+
 <a name="1.10.1"></a>
 ## [1.10.1](https://github.com/sth/karma-summary-reporter/tree/1.10.1), 2021-01-13 ([compare to v1.10.0](https://github.com/sth/karma-summary-reporter/compare/v1.10.0...1.10.1))
 
