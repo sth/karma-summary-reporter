@@ -9,7 +9,7 @@
   "author": "Stephan Hohe <sth.dev@tejp.de>",
   "license": "MIT",
   "peerDependencies": {
-    "karma": "^1.2.0 || 2.x || 3.x || 4.x || 5.x || 6.x"
+    "karma": "5.x || 6.x"
   },
   "repository": {
     "type": "git",
