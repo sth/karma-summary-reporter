@@ -24,7 +24,8 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	var browserList = config.summaryReporter.browserList || 'always';
 
 	// We use our own instance, respecting config.colors
-	var chalk = new chalk_global.constructor({enabled: config.colors});
+	// If config.colors is true, we use the default chalk level
+	var chalk = new chalk_global.Instance({level: (config.colors ? undefined : 0)});
 
 	var runStarted = false;
 	var specorder, specresults;
