@@ -1,8 +1,16 @@
 # Changelog
 
+<a name="v2.0.2"></a>
+## [v2.0.2](https://github.com/sth/karma-summary-reporter/tree/v2.0.2), 2021-03-17 ([compare to v2.0.1](https://github.com/sth/karma-summary-reporter/compare/v2.0.1...v2.0.2))
+
+* Exclude unnecessary files from published package ([a18c12f](https://github.com/sth/karma-summary-reporter/commit/a18c12f7f8884e9ea41ea0cbd10bce1e467f00ea))
+* Move all changelog helper files to .chglog ([7ee9f19](https://github.com/sth/karma-summary-reporter/commit/7ee9f1949caf74e4485ef3c51bc4edfbd6cd28a3))
+
 <a name="v2.0.1"></a>
 ## [v2.0.1](https://github.com/sth/karma-summary-reporter/tree/v2.0.1), 2021-03-17 ([compare to v2.0.0](https://github.com/sth/karma-summary-reporter/compare/v2.0.0...v2.0.1))
 
+* v2.0.1 ([cfc54eb](https://github.com/sth/karma-summary-reporter/commit/cfc54eb834f9105273c7860879e559734a1b4f46))
+* Update changelog ([ed6b0d7](https://github.com/sth/karma-summary-reporter/commit/ed6b0d7c116d8dedb83d52db5fb2f2928c703439))
 * Merge pull request [#16](https://github.com/sth/karma-summary-reporter/issues/16) from leobalter/bump-deps ([5de2f65](https://github.com/sth/karma-summary-reporter/commit/5de2f65bf6dca260e6ec82f2eea30e6a2610f26b))
 * Bump devDependencies version ([bdba2ca](https://github.com/sth/karma-summary-reporter/commit/bdba2cad2e4aeeeebe46fa8adbb7b58293b4bcc4))
 * Test node v15; Test pull requests; Use v2 actions ([f855852](https://github.com/sth/karma-summary-reporter/commit/f8558520a7c76873dfee6c15f727b831abfdbb21))

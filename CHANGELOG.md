@@ -1,5 +1,10 @@
 # Changelog
 
+<a name="v2.0.2"></a>
+## [v2.0.2](https://github.com/sth/karma-summary-reporter/tree/v2.0.2), 2021-03-17 ([compare to v2.0.1](https://github.com/sth/karma-summary-reporter/compare/v2.0.1...v2.0.2))
+
+* **Improvement**: Remove unused files from packaged code
+
 <a name="v2.0.1"></a>
 ## [v2.0.1](https://github.com/sth/karma-summary-reporter/tree/v2.0.1), 2021-03-17 ([compare to v2.0.0](https://github.com/sth/karma-summary-reporter/compare/v2.0.0...v2.0.1))
 
