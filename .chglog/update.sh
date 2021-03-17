@@ -3,6 +3,10 @@ set -eu
 
 NEXT="${1:-master}"
 
-cd "$(dirname $0)"
-git-chglog --next-tag "$NEXT" > CHANGELOG.raw.md
-git diff CHANGELOG.raw.md
+cd "$(dirname $0)/.."
+git-chglog --next-tag "$NEXT" > .chglog/CHANGELOG.raw.md
+git diff .chglog/CHANGELOG.raw.md
+
+echo
+echo "Edit main changelog with:"
+echo "   vim -o CHANGELOG.md .chglog/CHANGELOG.raw.md"
