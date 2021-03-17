@@ -58,8 +58,8 @@ module.exports = function(config) {
          specLength: 50,
          // Show an 'all' column as a summary
          overviewColumn: true,
-			// Show a list of test clients, 'always', 'never' or 'ifneeded'
-			browserList: 'always'
+         // Show a list of test clients, 'always', 'never' or 'ifneeded'
+         browserList: 'always'
       }
    });
 };
