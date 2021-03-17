@@ -1,5 +1,12 @@
 # Changelog
 
+<a name="v2.0.1"></a>
+## [v2.0.1](https://github.com/sth/karma-summary-reporter/tree/v2.0.1), 2021-03-17 ([compare to v2.0.0](https://github.com/sth/karma-summary-reporter/compare/v2.0.0...v2.0.1))
+
+* **Improvement**: Update dev dependencies
+* **Compatibility**: Add node v15 to CI testing
+* **Documentation**: Improve changelog
+
 <a name="v2.0.0"></a>
 ## [v2.0.0](https://github.com/sth/karma-summary-reporter/tree/v2.0.0), 2021-01-14 ([compare to v1.10.1](https://github.com/sth/karma-summary-reporter/compare/v1.10.1...v2.0.0))
 

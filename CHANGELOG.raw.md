@@ -1,8 +1,20 @@
 # Changelog
 
-<a name="master"></a>
-## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v1.10.1](https://github.com/sth/karma-summary-reporter/compare/v1.10.1...master))
+<a name="v2.0.1"></a>
+## [v2.0.1](https://github.com/sth/karma-summary-reporter/tree/v2.0.1), 2021-03-17 ([compare to v2.0.0](https://github.com/sth/karma-summary-reporter/compare/v2.0.0...v2.0.1))
 
+* Merge pull request [#16](https://github.com/sth/karma-summary-reporter/issues/16) from leobalter/bump-deps ([5de2f65](https://github.com/sth/karma-summary-reporter/commit/5de2f65bf6dca260e6ec82f2eea30e6a2610f26b))
+* Bump devDependencies version ([bdba2ca](https://github.com/sth/karma-summary-reporter/commit/bdba2cad2e4aeeeebe46fa8adbb7b58293b4bcc4))
+* Test node v15; Test pull requests; Use v2 actions ([f855852](https://github.com/sth/karma-summary-reporter/commit/f8558520a7c76873dfee6c15f727b831abfdbb21))
+* Fix some links in changelog ([d496ee2](https://github.com/sth/karma-summary-reporter/commit/d496ee2e90756f322f458b5e19a3952313e30fe3))
+* Remove node v8 from testing ([de25b97](https://github.com/sth/karma-summary-reporter/commit/de25b97a325abd6179f002e857857906246767c1))
+* Fix changelog syntax ([894c83d](https://github.com/sth/karma-summary-reporter/commit/894c83dd907260a734cca57f15e02004a4bb73ab))
+
+<a name="v2.0.0"></a>
+## [v2.0.0](https://github.com/sth/karma-summary-reporter/tree/v2.0.0), 2021-01-14 ([compare to v1.10.1](https://github.com/sth/karma-summary-reporter/compare/v1.10.1...v2.0.0))
+
+* v2.0.0 ([877a125](https://github.com/sth/karma-summary-reporter/commit/877a1252af772dfffc027dfadd340c7b3a619671))
+* Update changelog ([9f3359d](https://github.com/sth/karma-summary-reporter/commit/9f3359d710cf47d43847860871cbbf3bd5afcf9d))
 * Remove karma <= v4 from peerDependencies ([2aac290](https://github.com/sth/karma-summary-reporter/commit/2aac2909ef21e1b33b4c15e7cc37c669b6d10911))
 * Update dev dependencies ([45be247](https://github.com/sth/karma-summary-reporter/commit/45be2472582db83d4dfc786a251b2c5701be16ac))
 * Update chalk to ^4.0.0 (breaks node < v10) ([0b3998c](https://github.com/sth/karma-summary-reporter/commit/0b3998c9ba2619f623efe72b7073659e39f05239))
