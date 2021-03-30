@@ -93,8 +93,8 @@ option to `false` disables this column.
 Show the list of connected browsers before the result table
 
 - `'always'`: Show always (default)
-- `'ifneeded'`: Show only if there are test results shown from multiple browsers
 - `'never'`: Show never
+- `'ifneeded'`: Show only if there are test results shown from multiple browsers
 
 ## Test failure details
 
