@@ -1,8 +1,29 @@
 # Changelog
 
+<a name="master"></a>
+## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v2.0.3](https://github.com/sth/karma-summary-reporter/compare/v2.0.3...master))
+
+
+<a name="v2.0.3"></a>
+## [v2.0.3](https://github.com/sth/karma-summary-reporter/tree/v2.0.3), 2021-09-14 ([compare to v2.0.2](https://github.com/sth/karma-summary-reporter/compare/v2.0.2...v2.0.3))
+
+* v2.0.3 ([cbdd462](https://github.com/sth/karma-summary-reporter/commit/cbdd462db44f7502c69e4e66a5fc1202826395bb))
+* Upgrade dependencies ([c357d5e](https://github.com/sth/karma-summary-reporter/commit/c357d5eae08d963fe7248f6155e96fa452288154))
+* Merge pull request [#18](https://github.com/sth/karma-summary-reporter/issues/18) from sth/dependabot/npm_and_yarn/glob-parent-5.1.2 ([0871efc](https://github.com/sth/karma-summary-reporter/commit/0871efcb46b0be531c11377eeb74da8b8291e9c9))
+* Bump glob-parent from 5.1.1 to 5.1.2 ([4e24c41](https://github.com/sth/karma-summary-reporter/commit/4e24c41c0c1fa4aac01b1c15a5f485215ac0a69a))
+* Merge pull request [#17](https://github.com/sth/karma-summary-reporter/issues/17) from sth/dependabot/npm_and_yarn/examples/ws-7.4.6 ([e3738ea](https://github.com/sth/karma-summary-reporter/commit/e3738eaae725ebae5fff39e8b0c1dfc42634a4ca))
+* Bump ws from 7.4.4 to 7.4.6 in /examples ([5cf13ff](https://github.com/sth/karma-summary-reporter/commit/5cf13ff4bd40d424e6225a4e668175a10bb73a23))
+* Add testing for node v16 ([854af3e](https://github.com/sth/karma-summary-reporter/commit/854af3e45fa8ca979fde6d3f7f0a36982ce8986a))
+* Formatting ([a164017](https://github.com/sth/karma-summary-reporter/commit/a164017a09a1ef009487a7b03d617e28728c050b))
+* Upgrade example dependencies ([e3d33b4](https://github.com/sth/karma-summary-reporter/commit/e3d33b4a5d56c168063181b3701fbcc970d42805))
+* Fix indent ([a0b4ce0](https://github.com/sth/karma-summary-reporter/commit/a0b4ce0a13d2265e13922fd872f8c3b6430a10a6))
+
 <a name="v2.0.2"></a>
 ## [v2.0.2](https://github.com/sth/karma-summary-reporter/tree/v2.0.2), 2021-03-17 ([compare to v2.0.1](https://github.com/sth/karma-summary-reporter/compare/v2.0.1...v2.0.2))
 
+* v2.0.2 ([bf4a29d](https://github.com/sth/karma-summary-reporter/commit/bf4a29d783414dcad479d162f7efaa0f5fef6d69))
+* Update changelog ([edc70b0](https://github.com/sth/karma-summary-reporter/commit/edc70b0dac7baeb917ccf615c49afc773bd020dd))
+* Improve changelog script ([633c909](https://github.com/sth/karma-summary-reporter/commit/633c90956907a566488d618e49aae83cdd76d591))
 * Exclude unnecessary files from published package ([a18c12f](https://github.com/sth/karma-summary-reporter/commit/a18c12f7f8884e9ea41ea0cbd10bce1e467f00ea))
 * Move all changelog helper files to .chglog ([7ee9f19](https://github.com/sth/karma-summary-reporter/commit/7ee9f1949caf74e4485ef3c51bc4edfbd6cd28a3))
 
