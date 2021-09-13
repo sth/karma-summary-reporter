@@ -1,8 +1,12 @@
 # Changelog
 
-<a name="master"></a>
-## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v2.0.3](https://github.com/sth/karma-summary-reporter/compare/v2.0.3...master))
+<a name="v3.0.0"></a>
+## [v3.0.0](https://github.com/sth/karma-summary-reporter/tree/v3.0.0), 2021-09-14 ([compare to v2.0.3](https://github.com/sth/karma-summary-reporter/compare/v2.0.3...v3.0.0))
 
+* Merge release info for v2.0.3 ([b7f47d8](https://github.com/sth/karma-summary-reporter/commit/b7f47d89ea52b0640f4995d8f85db4d329a62616))
+* Update changelog for v2.0.3 ([be86562](https://github.com/sth/karma-summary-reporter/commit/be86562a1a524d4d9a7c161d285eb4813d5d58b4))
+* Upgrade mocha to v9 ([db2745e](https://github.com/sth/karma-summary-reporter/commit/db2745e75a55c6032c6535d3736a035ea6c11e6c))
+* Remove support for node v10 ([f15d039](https://github.com/sth/karma-summary-reporter/commit/f15d039bccceefcdc21099f948d0c0c5d8a94e52))
 
 <a name="v2.0.3"></a>
 ## [v2.0.3](https://github.com/sth/karma-summary-reporter/tree/v2.0.3), 2021-09-14 ([compare to v2.0.2](https://github.com/sth/karma-summary-reporter/compare/v2.0.2...v2.0.3))
