@@ -1,5 +1,11 @@
 # Changelog
 
+<a name="v2.0.3"></a>
+## [v2.0.3](https://github.com/sth/karma-summary-reporter/tree/v2.0.3), 2021-09-14 ([compare to v2.0.2](https://github.com/sth/karma-summary-reporter/compare/v2.0.2...v2.0.3))
+
+* **Improvement**: Upgrade dependencies
+* **Improvement**: Add testing for node v16 ([854af3e](https://github.com/sth/karma-summary-reporter/commit/854af3e45fa8ca979fde6d3f7f0a36982ce8986a))
+
 <a name="v2.0.2"></a>
 ## [v2.0.2](https://github.com/sth/karma-summary-reporter/tree/v2.0.2), 2021-03-17 ([compare to v2.0.1](https://github.com/sth/karma-summary-reporter/compare/v2.0.1...v2.0.2))
 
