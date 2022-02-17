@@ -1,8 +1,35 @@
 # Changelog
 
+<a name="v3.1.1"></a>
+## [v3.1.1](https://github.com/sth/karma-summary-reporter/tree/v3.1.1), 0001-01-01 ([compare to v3.1.0](https://github.com/sth/karma-summary-reporter/compare/v3.1.0...v3.1.1))
+
+
+<a name="v3.1.0"></a>
+## [v3.1.0](https://github.com/sth/karma-summary-reporter/tree/v3.1.0), 2022-02-17 ([compare to v3.0.0](https://github.com/sth/karma-summary-reporter/compare/v3.0.0...v3.1.0))
+
+* v3.1.0 ([df032c3](https://github.com/sth/karma-summary-reporter/commit/df032c341d50209e61e228581d8c98848cc12f7d))
+* Use local package in examples ([bdce156](https://github.com/sth/karma-summary-reporter/commit/bdce156f9f75da929332b3b9dfd4c36144984dea))
+* Add `symbols` config option ([a987389](https://github.com/sth/karma-summary-reporter/commit/a98738933d24fa975993870f6d6054defd416fb3))
+* Upgrade dependencies ([03a54a1](https://github.com/sth/karma-summary-reporter/commit/03a54a133aeef12e3c7cbd1b5ccf978f58535033))
+* Merge remote-tracking branch 'refs/remotes/origin/master' ([ba8ac74](https://github.com/sth/karma-summary-reporter/commit/ba8ac7467732fbbc0583725e283cca8cdea99367))
+* Merge pull request [#22](https://github.com/sth/karma-summary-reporter/issues/22) from sth/dependabot/npm_and_yarn/examples/karma-6.3.14 ([6c078b0](https://github.com/sth/karma-summary-reporter/commit/6c078b01639a75ca3f604d1c235c433e536a944a))
+* Merge pull request [#23](https://github.com/sth/karma-summary-reporter/issues/23) from sth/dependabot/npm_and_yarn/examples/follow-redirects-1.14.8 ([c821207](https://github.com/sth/karma-summary-reporter/commit/c8212070971de92feb44bb428c7afbeefcccb5ec))
+* Bump follow-redirects from 1.14.7 to 1.14.8 in /examples ([3a268ba](https://github.com/sth/karma-summary-reporter/commit/3a268babe72fee9e07215d438a8388076591cbfd))
+* Bump karma from 6.2.0 to 6.3.14 in /examples ([fa8494c](https://github.com/sth/karma-summary-reporter/commit/fa8494cb9adbbfb31194ae79a2320a5e677e6263))
+* Upgrade packages in examples/ ([4e83c6a](https://github.com/sth/karma-summary-reporter/commit/4e83c6a9e5596763900e0f2be53a504242a20448))
+* Upgrade mocha ([adbc37e](https://github.com/sth/karma-summary-reporter/commit/adbc37eba627e64009ee5239465c59fd5d5412ca))
+* Merge pull request [#21](https://github.com/sth/karma-summary-reporter/issues/21) from sth/dependabot/npm_and_yarn/examples/log4js-6.4.0 ([5d6874c](https://github.com/sth/karma-summary-reporter/commit/5d6874cfe75a33c9c520c52e57523d49fcfd9aea))
+* Bump log4js from 6.3.0 to 6.4.0 in /examples ([2fd3a82](https://github.com/sth/karma-summary-reporter/commit/2fd3a8238ee62afefa3b7eaed23c25d8ffa8304a))
+* Merge pull request [#20](https://github.com/sth/karma-summary-reporter/issues/20) from sth/dependabot/npm_and_yarn/examples/engine.io-4.1.2 ([1f1bdb0](https://github.com/sth/karma-summary-reporter/commit/1f1bdb08b966302ffb324e52eacfea44c5118942))
+* Merge pull request [#19](https://github.com/sth/karma-summary-reporter/issues/19) from sth/dependabot/npm_and_yarn/examples/follow-redirects-1.14.7 ([1a427cb](https://github.com/sth/karma-summary-reporter/commit/1a427cba8d18c6a83baddab527b0ca8a357047b8))
+* Bump engine.io from 4.1.1 to 4.1.2 in /examples ([8f91a6d](https://github.com/sth/karma-summary-reporter/commit/8f91a6d354bec8a58377be65a69d6d579e565c5b))
+* Bump follow-redirects from 1.13.3 to 1.14.7 in /examples ([06eb45f](https://github.com/sth/karma-summary-reporter/commit/06eb45fb5a7ac1ab51f9bf73ce1d787fe7a307ac))
+
 <a name="v3.0.0"></a>
 ## [v3.0.0](https://github.com/sth/karma-summary-reporter/tree/v3.0.0), 2021-09-14 ([compare to v2.0.3](https://github.com/sth/karma-summary-reporter/compare/v2.0.3...v3.0.0))
 
+* v3.0.0 ([75609e7](https://github.com/sth/karma-summary-reporter/commit/75609e713af7b9fd769076660c8742c0d588e6e6))
+* Update changelog ([bc52d47](https://github.com/sth/karma-summary-reporter/commit/bc52d47f50fdc9730646ec518556bf71cd5e05f1))
 * Merge release info for v2.0.3 ([b7f47d8](https://github.com/sth/karma-summary-reporter/commit/b7f47d89ea52b0640f4995d8f85db4d329a62616))
 * Update changelog for v2.0.3 ([be86562](https://github.com/sth/karma-summary-reporter/commit/be86562a1a524d4d9a7c161d285eb4813d5d58b4))
 * Upgrade mocha to v9 ([db2745e](https://github.com/sth/karma-summary-reporter/commit/db2745e75a55c6032c6535d3736a035ea6c11e6c))

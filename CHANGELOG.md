@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="v3.1.1"></a>
+## [v3.1.1](https://github.com/sth/karma-summary-reporter/tree/v3.1.1), 0001-01-01 ([compare to v3.1.0](https://github.com/sth/karma-summary-reporter/compare/v3.1.0...v3.1.1))
+
+* **Documentation**: Update changelog
+
+<a name="v3.1.0"></a>
+## [v3.1.0](https://github.com/sth/karma-summary-reporter/tree/v3.1.0), 2022-02-17 ([compare to v3.0.0](https://github.com/sth/karma-summary-reporter/compare/v3.0.0...v3.1.0))
+
+* **Feature**: Add a [`symbols` config option](./#symbols) ([a987389](https://github.com/sth/karma-summary-reporter/commit/a98738933d24fa975993870f6d6054defd416fb3))
+* **Improvement**: Upgrade dependencies
+* **Improvement (dev)**: Use local karma-summary-reporter package in examples ([bdce156](https://github.com/sth/karma-summary-reporter/commit/bdce156f9f75da929332b3b9dfd4c36144984dea))
+
 <a name="v3.0.0"></a>
 ## [v3.0.0](https://github.com/sth/karma-summary-reporter/tree/v3.0.0), 2021-09-14 ([compare to v2.0.3](https://github.com/sth/karma-summary-reporter/compare/v2.0.3...v3.0.0))
 
