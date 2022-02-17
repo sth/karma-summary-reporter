@@ -12,7 +12,7 @@
   "homepage": "https://github.com/sth/karma-summary-reporter#readme",
   "dependencies": {
     "chai": "^4.1.2",
-    "karma": "^6.0.0",
+    "karma": "^6.3.14",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^2.0.0",
     "karma-summary-reporter": "^3.0.0",
