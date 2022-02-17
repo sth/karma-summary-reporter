@@ -598,10 +598,8 @@ karma-mocha@^2.0.0:
   dependencies:
     minimist "^1.2.3"
 
-karma-summary-reporter@^3.0.0:
+"karma-summary-reporter@file:..":
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/karma-summary-reporter/-/karma-summary-reporter-3.0.0.tgz#b4c1d26437a46e5fdcb4b7be5277530eb9af9182"
-  integrity sha512-E8O18XzS1UZ+j5fd/MPKFhg+IvzxenHudfAXocrz3zVS/yfVmurHZvmCI/hHeNo4q6ItIA3yAUThh1ZIM7AkKw==
   dependencies:
     chalk "^4.0.0"
 
