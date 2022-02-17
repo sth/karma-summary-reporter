@@ -1,7 +1,7 @@
 # Changelog
 
 <a name="v3.1.1"></a>
-## [v3.1.1](https://github.com/sth/karma-summary-reporter/tree/v3.1.1), 0001-01-01 ([compare to v3.1.0](https://github.com/sth/karma-summary-reporter/compare/v3.1.0...v3.1.1))
+## [v3.1.1](https://github.com/sth/karma-summary-reporter/tree/v3.1.1), 2022-02-17 ([compare to v3.1.0](https://github.com/sth/karma-summary-reporter/compare/v3.1.0...v3.1.1))
 
 * **Documentation**: Update changelog
 

@@ -1,8 +1,15 @@
 # Changelog
 
-<a name="v3.1.1"></a>
-## [v3.1.1](https://github.com/sth/karma-summary-reporter/tree/v3.1.1), 0001-01-01 ([compare to v3.1.0](https://github.com/sth/karma-summary-reporter/compare/v3.1.0...v3.1.1))
+<a name="master"></a>
+## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v3.1.1](https://github.com/sth/karma-summary-reporter/compare/v3.1.1...master))
 
+
+<a name="v3.1.1"></a>
+## [v3.1.1](https://github.com/sth/karma-summary-reporter/tree/v3.1.1), 2022-02-17 ([compare to v3.1.0](https://github.com/sth/karma-summary-reporter/compare/v3.1.0...v3.1.1))
+
+* v3.1.1 ([6c60c2d](https://github.com/sth/karma-summary-reporter/commit/6c60c2dc4a07faf00eccfb184eaabf6472e396c5))
+* Fix link ([73e2e15](https://github.com/sth/karma-summary-reporter/commit/73e2e157d3e8e38ea6fe88b29f7a7baaac0b3d00))
+* Update changelog ([60b1a27](https://github.com/sth/karma-summary-reporter/commit/60b1a27451a59044156022477de1aa2a494f13a0))
 
 <a name="v3.1.0"></a>
 ## [v3.1.0](https://github.com/sth/karma-summary-reporter/tree/v3.1.0), 2022-02-17 ([compare to v3.0.0](https://github.com/sth/karma-summary-reporter/compare/v3.0.0...v3.1.0))
