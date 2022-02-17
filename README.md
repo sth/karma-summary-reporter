@@ -59,7 +59,9 @@ module.exports = function(config) {
          // Show an 'all' column as a summary
          overviewColumn: true,
          // Show a list of test clients, 'always', 'never' or 'ifneeded'
-         browserList: 'always'
+         browserList: 'always',
+         // Use custom symbols to indicate success and failure
+         symbols: {success: 'o', failure: 'x'}
       }
    });
 };
@@ -95,6 +97,23 @@ Show the list of connected browsers before the result table
 - `'always'`: Show always (default)
 - `'never'`: Show never
 - `'ifneeded'`: Show only if there are test results shown from multiple browsers
+
+### symbols
+
+Customize the symbols used to show successful or failed tests. In some fonts the
+default symbols might not look optimal, so different ones can be configured. For
+example, to use pure ASCII symbols:
+
+    symbols: {
+       success: 'o',
+       failure: 'x'
+    }
+
+`symbols.success` is used for successful test cases, `symbols.failure` for
+failed test cases.
+
+It is expected that each of those symbols displays as a single character,
+otherwise the output might not line up correctly.
 
 ## Test failure details
 

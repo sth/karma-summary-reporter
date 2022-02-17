@@ -1,9 +1,9 @@
 
 var chalk_global = require('chalk');
 
-var symbol = process.platform === 'win32'
-	? {tick: '√', cross: '×'}
-	: {tick: '✔', cross: '✖'};
+var default_symbols = process.platform === 'win32'
+	? {success: '√', failure: '×'}
+	: {success: '✔', failure: '✖'};
 
 function strmul(s, n) {
 	var r = '';
@@ -26,6 +26,8 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 	// We use our own instance, respecting config.colors
 	// If config.colors is true, we use the default chalk level
 	var chalk = new chalk_global.Instance({level: (config.colors ? undefined : 0)});
+
+	var symbols = Object.assign({}, default_symbols, config.summaryReporter.symbols);
 
 	var runStarted = false;
 	var specorder, specresults;
@@ -86,12 +88,12 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			this.writeCommonMsg(chalk.yellow(' - '));
 		else if (result.success) {
 			if (!result.partial)
-				this.writeCommonMsg(chalk.green(' ' +  symbol.tick + ' '));
+				this.writeCommonMsg(chalk.green(' ' +  symbols.success + ' '));
 			else
-				this.writeCommonMsg(chalk.yellow('(' +  symbol.tick + ')'));
+				this.writeCommonMsg(chalk.yellow('(' +  symbols.success + ')'));
 		}
 		else {
-			this.writeCommonMsg(chalk.red(' ' + symbol.cross + ' '));
+			this.writeCommonMsg(chalk.red(' ' + symbols.failure + ' '));
 		}
 	};
 
