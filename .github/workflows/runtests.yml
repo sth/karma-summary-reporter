@@ -1,9 +1,9 @@
-name: New changeset
+name: Run Tests
 on: [push, pull_request]
 
 jobs:
-  test:
-    name: Run tests
+  nodejs:
+    name: NodeJS
     strategy:
       matrix:
         os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
