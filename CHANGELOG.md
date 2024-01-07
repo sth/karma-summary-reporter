@@ -1,5 +1,10 @@
 # Changelog
 
+<a name="v4.0.1"></a>
+## [v4.0.1](https://github.com/sth/karma-summary-reporter/tree/v4.0.1), 2024-01-07 ([compare to v4.0.0](https://github.com/sth/karma-summary-reporter/compare/v4.0.0...v4.0.1))
+
+* **Improvement**: Re-publish from correct branch
+
 <a name="v4.0.0"></a>
 ## [v4.0.0](https://github.com/sth/karma-summary-reporter/tree/v4.0.0), 2024-01-07 ([compare to v3.1.1](https://github.com/sth/karma-summary-reporter/compare/v3.1.1...v4.0.0))
 

@@ -1,8 +1,16 @@
 # Changelog
 
+<a name="v4.0.1"></a>
+## [v4.0.1](https://github.com/sth/karma-summary-reporter/tree/v4.0.1), 2024-01-07 ([compare to v4.0.0](https://github.com/sth/karma-summary-reporter/compare/v4.0.0...v4.0.1))
+
+* Merge branch 'upgrade-dependencies' ([4fd8de2](https://github.com/sth/karma-summary-reporter/commit/4fd8de21e15aa0b35fc4d55558b9b7cfd32e06e2))
+* Upgrade dependencies ([#32](https://github.com/sth/karma-summary-reporter/issues/32)) ([8804369](https://github.com/sth/karma-summary-reporter/commit/88043692255e93e10655bd4682d673e23b96241d))
+
 <a name="v4.0.0"></a>
 ## [v4.0.0](https://github.com/sth/karma-summary-reporter/tree/v4.0.0), 2024-01-07 ([compare to v3.1.1](https://github.com/sth/karma-summary-reporter/compare/v3.1.1...v4.0.0))
 
+* v4.0.0 ([05a443d](https://github.com/sth/karma-summary-reporter/commit/05a443d6640a51f6f82c7121356bd9de4cb7cc93))
+* Update CHANGELOG ([77494b9](https://github.com/sth/karma-summary-reporter/commit/77494b9472cfa5c05d9cb2361066fdc227147a0f))
 * Upgrade dependencies ([3e52b0d](https://github.com/sth/karma-summary-reporter/commit/3e52b0dfad25eb17aaa564d9542218f6c4bc9598))
 * Upgrade nodejs versions ([#33](https://github.com/sth/karma-summary-reporter/issues/33)) ([fb672f3](https://github.com/sth/karma-summary-reporter/commit/fb672f30e733e8d43678a6cb35a01942dbcb5e31))
 * Report tests separately even if their descriptions match ([#31](https://github.com/sth/karma-summary-reporter/issues/31)) ([5e4efdc](https://github.com/sth/karma-summary-reporter/commit/5e4efdc755e0d9a8e28d94ab5c08ae5333e8c0da))
