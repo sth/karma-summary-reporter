@@ -41,7 +41,27 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			return;
 		}
 
-		var specid = result.suite.join('/') + '/' + result.description;
+		var specid;
+		if (result.id) {
+			// For example jasmine sets `result.id`
+			specid = result.id;
+		}
+		else {
+			// mocha/chai doesn't set `result.id`, so we need to improvise to
+			// distinguish test cases.
+			var specid_base = result.suite.join('/') + '/' + result.description;
+			specid = specid_base;
+			// Check if we already saw the spec id (which would mean there is
+			// more than one test with the same description)
+			// We cannot guarantee that we see specs in the same order for multiple
+			// browsers, so results might get mixed up for "duplicate" testcases,
+			// but it's the best we can do if there isn't a `result.id`.
+			var num = 0;
+			while (specid in specresults && browser.id in specresults[specid].results) {
+				num++;
+				specid = specid_base + "~" + num;
+			}
+		}
 		if (!(specid in specresults)) {
 			specorder.push(specid);
 			specresults[specid] = {
@@ -62,7 +82,7 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			if (i < currentPath.length && s != currentPath[i]) {
 				currentPath.length = i;
 			}
-			if (i >= currentPath.length) {
+			if (i >= currentPath.length || i == path.length - 1) {
 				var label = indent + s;
 				if (label.length > specLength) {
 					label = label.slice(0, specLength-3) + '...';
