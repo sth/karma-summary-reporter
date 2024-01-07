@@ -5,17 +5,21 @@
   "description": "Examples for karma-summary-reporter.",
   "scripts": {
     "bugs": "karma start bugs/karma.conf.js",
-    "features": "karma start features/karma.conf.js"
+    "features": "karma start features/karma.conf.js",
+    "issue-#30/mocha-chai": "karma start issue-#30/mocha-chai/karma.conf.js",
+    "issue-#30/jasmine": "karma start issue-#30/jasmine/karma.conf.js"
   },
   "author": "Stephan Hohe <sth.dev@tejp.de>",
   "license": "MIT",
   "homepage": "https://github.com/sth/karma-summary-reporter#readme",
   "dependencies": {
     "chai": "^4.1.2",
+    "jasmine": "^5.1.0",
     "karma": "^6.3.14",
     "karma-chai": "^0.1.0",
+    "karma-jasmine": "^5.1.0",
     "karma-mocha": "^2.0.0",
-    "karma-summary-reporter": "file:..",
+    "karma-summary-reporter": "link:..",
     "mocha": "^9.0.0"
   }
 }
