@@ -1,8 +1,32 @@
 # Changelog
 
-<a name="master"></a>
-## [master](https://github.com/sth/karma-summary-reporter/tree/master), ([compare to v3.1.1](https://github.com/sth/karma-summary-reporter/compare/v3.1.1...master))
+<a name="v4.0.0"></a>
+## [v4.0.0](https://github.com/sth/karma-summary-reporter/tree/v4.0.0), 2024-01-07 ([compare to v3.1.1](https://github.com/sth/karma-summary-reporter/compare/v3.1.1...v4.0.0))
 
+* Upgrade dependencies ([3e52b0d](https://github.com/sth/karma-summary-reporter/commit/3e52b0dfad25eb17aaa564d9542218f6c4bc9598))
+* Upgrade nodejs versions ([#33](https://github.com/sth/karma-summary-reporter/issues/33)) ([fb672f3](https://github.com/sth/karma-summary-reporter/commit/fb672f30e733e8d43678a6cb35a01942dbcb5e31))
+* Report tests separately even if their descriptions match ([#31](https://github.com/sth/karma-summary-reporter/issues/31)) ([5e4efdc](https://github.com/sth/karma-summary-reporter/commit/5e4efdc755e0d9a8e28d94ab5c08ae5333e8c0da))
+* Bump get-func-name from 2.0.0 to 2.0.2 in /examples ([e69f962](https://github.com/sth/karma-summary-reporter/commit/e69f96229828c2b26ff7f4bfef8738f49d006128))
+* Bump get-func-name from 2.0.0 to 2.0.2 ([2cd32b2](https://github.com/sth/karma-summary-reporter/commit/2cd32b2b0cd15b9b4f9c89040427cd0c359c77ab))
+* Bump socket.io-parser from 4.2.2 to 4.2.3 in /examples ([adee50c](https://github.com/sth/karma-summary-reporter/commit/adee50ce3e829abb4a75dd4071fa122e7413218d))
+* Update packages used in examples ([0799923](https://github.com/sth/karma-summary-reporter/commit/0799923acb205650cc7ce33dca2ae087b413de57))
+* Bump ua-parser-js from 0.7.32 to 0.7.33 in /examples ([#26](https://github.com/sth/karma-summary-reporter/issues/26)) ([3d44635](https://github.com/sth/karma-summary-reporter/commit/3d44635ca3288ed36f77cc322a64829a4986b002))
+* Upgrade GitHub Actions ([#25](https://github.com/sth/karma-summary-reporter/issues/25)) ([297976b](https://github.com/sth/karma-summary-reporter/commit/297976b7704703b57a09bb6ccde1b196b87bf6ad))
+* Remove deprecated Ubunutu 18.04 from test actions ([f1cc852](https://github.com/sth/karma-summary-reporter/commit/f1cc852d7a1ebb3d1fd1904a781ae78e0e5af81b))
+* Add tests for Ubuntu 22.04, Node 18 and Node 19; Remove tests for Node ([6227bbf](https://github.com/sth/karma-summary-reporter/commit/6227bbf4058755becd1ef8d71cf80d0a94172a8f))
+* Merge pull request [#24](https://github.com/sth/karma-summary-reporter/issues/24) from sth/dependabot/npm_and_yarn/examples/engine.io-6.2.1 ([a6cee93](https://github.com/sth/karma-summary-reporter/commit/a6cee93b05b7eb3bea08d0715746fc7256a4912d))
+* Bump engine.io from 6.2.0 to 6.2.1 in /examples ([79a4531](https://github.com/sth/karma-summary-reporter/commit/79a453126564746cc39fc162b83e59714a470a30))
+* Upgrade dependencies ([6ca0a27](https://github.com/sth/karma-summary-reporter/commit/6ca0a27a962dfa80605e315bc8c0e1ddc4b0c466))
+* Upgrade packages used in examples/ ([3e31750](https://github.com/sth/karma-summary-reporter/commit/3e317505cb95860a65317428b1e456b12b283d10))
+* Add yarn caching in Github action ([0f119ff](https://github.com/sth/karma-summary-reporter/commit/0f119ff82c8bf033c3ecb68bfa0aa74633dd578c))
+* Upgrade dependencies in examples/ ([089293b](https://github.com/sth/karma-summary-reporter/commit/089293b0594a2b4c5dceaf2f89396d1ed0234eec))
+* Ordering the names didn't do anything, so return to the old names ([b4875fd](https://github.com/sth/karma-summary-reporter/commit/b4875fd04e4779d41dd23806c42c2eb663d666b4))
+* Order workflow actions ([cdcaf29](https://github.com/sth/karma-summary-reporter/commit/cdcaf2971a049ddb8da020d339f678ff2240671e))
+* Rename workflow action ([2428e4c](https://github.com/sth/karma-summary-reporter/commit/2428e4c6dbba7066fcb92e6f2c67a2346f26d8f7))
+* Remove NodeJS 15 from test matrix, add NodeJS 17 ([b2a2d0d](https://github.com/sth/karma-summary-reporter/commit/b2a2d0d77db4766aca5f9706fcf8980b2425d6c4))
+* Rename workflow ([840b8bb](https://github.com/sth/karma-summary-reporter/commit/840b8bbfada4c138fcbcb682b98225e97d4316d1))
+* Add CodeQL Analysis ([267f9f0](https://github.com/sth/karma-summary-reporter/commit/267f9f08e3b9eb71e4f11a5e5c3d3e499526821c))
+* Update date in changelog ([3259258](https://github.com/sth/karma-summary-reporter/commit/32592581986e88ea6e1b0907b74422af8af63710))
 
 <a name="v3.1.1"></a>
 ## [v3.1.1](https://github.com/sth/karma-summary-reporter/tree/v3.1.1), 2022-02-17 ([compare to v3.1.0](https://github.com/sth/karma-summary-reporter/compare/v3.1.0...v3.1.1))
