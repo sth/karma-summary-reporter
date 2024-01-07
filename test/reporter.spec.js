@@ -362,4 +362,34 @@ describe('Summary reporter', function () {
 				'formats the header correctly');
 		});
 	});
+
+	describe("duplicate test names", function() {
+		beforeEach(function() {
+			setupReporter({
+				summaryReporter: {
+					show: "all"
+				}
+			});
+		});
+
+		it('should show all tests with different result.id', function() {
+			const result = resultSuccess(1);
+			reporter.onRunStart([b1])
+			reporter.onSpecComplete(b1, {id: "specid1", ...result});
+			reporter.onSpecComplete(b1, {id: "specid2", ...result});
+			reporter.onRunComplete([b1])
+			chai.assert.equal(writeOutput.match(/test1/g).length, 2,
+					"shows test1 label two times");
+		});
+
+		it('should show all tests if result.id is missing', function() {
+			const result = resultSuccess(1);
+			reporter.onRunStart([b1])
+			reporter.onSpecComplete(b1, result);
+			reporter.onSpecComplete(b1, result);
+			reporter.onRunComplete([b1])
+			chai.assert.equal(writeOutput.match(/test1/g).length, 2,
+					"shows test1 label two times");
+		});
+	});
 });
