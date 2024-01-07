@@ -82,6 +82,8 @@ var SummaryReporter = function(baseReporterDecorator, config) {
 			if (i < currentPath.length && s != currentPath[i]) {
 				currentPath.length = i;
 			}
+			// Print the parts after the common prefix.
+			// If we don't have anything more than the common prefix, print the last path element.
 			if (i >= currentPath.length || i == path.length - 1) {
 				var label = indent + s;
 				if (label.length > specLength) {
