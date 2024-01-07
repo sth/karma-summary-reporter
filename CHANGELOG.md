@@ -1,5 +1,15 @@
 # Changelog
 
+<a name="v4.0.0"></a>
+## [v4.0.0](https://github.com/sth/karma-summary-reporter/tree/v4.0.0), 2024-01-07 ([compare to v3.1.1](https://github.com/sth/karma-summary-reporter/compare/v3.1.1...v4.0.0))
+
+* **Improvement (Breaking change)**: Remove testing for old Node versions 12, 14, 19 ([#33](https://github.com/sth/karma-summary-reporter/issues/33)) (**Now only tested for node >= v16**) ([fb672f3](https://github.com/sth/karma-summary-reporter/commit/fb672f30e733e8d43678a6cb35a01942dbcb5e31))
+* **Improvement (Breaking change)**: Upgrade dependencies (**Now requires node >= v14**) ([3e52b0d](https://github.com/sth/karma-summary-reporter/commit/3e52b0dfad25eb17aaa564d9542218f6c4bc9598) and others)
+* **Improvement**: Add testing for new Node versions 20, 21 ([#33](https://github.com/sth/karma-summary-reporter/issues/33)) ([fb672f3](https://github.com/sth/karma-summary-reporter/commit/fb672f30e733e8d43678a6cb35a01942dbcb5e31))
+* **Bugfix**: Report tests separately even if their descriptions match ([#31](https://github.com/sth/karma-summary-reporter/issues/31)) ([5e4efdc](https://github.com/sth/karma-summary-reporter/commit/5e4efdc755e0d9a8e28d94ab5c08ae5333e8c0da))
+* **Improvement (dev)**: Add yarn caching in Github action ([0f119ff](https://github.com/sth/karma-summary-reporter/commit/0f119ff82c8bf033c3ecb68bfa0aa74633dd578c))
+* **Improvement (dev)**: Add CodeQL Analysis ([267f9f0](https://github.com/sth/karma-summary-reporter/commit/267f9f08e3b9eb71e4f11a5e5c3d3e499526821c))
+
 <a name="v3.1.1"></a>
 ## [v3.1.1](https://github.com/sth/karma-summary-reporter/tree/v3.1.1), 2022-02-17 ([compare to v3.1.0](https://github.com/sth/karma-summary-reporter/compare/v3.1.0...v3.1.1))
 
