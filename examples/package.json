@@ -20,6 +20,6 @@
     "karma-jasmine": "^5.1.0",
     "karma-mocha": "^2.0.0",
     "karma-summary-reporter": "link:..",
-    "mocha": "^9.0.0"
+    "mocha": "^11.0.0"
   }
 }
