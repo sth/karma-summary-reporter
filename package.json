@@ -4,7 +4,7 @@
   "description": "Displays a summary of tested browsers and failed testcases after a test run.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/reporter.spec.js"
+    "test": "mocha test/reporter.spec.mjs"
   },
   "author": "Stephan Hohe <sth.dev@tejp.de>",
   "license": "MIT",
