@@ -27,7 +27,7 @@
     "node": ">=16"
   },
   "devDependencies": {
-    "chai": "^4.3.4",
+    "chai": "^6.2.2",
     "mocha": "^11.7.5"
   },
   "dependencies": {
