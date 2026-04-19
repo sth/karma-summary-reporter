@@ -1,6 +1,5 @@
-'use strict';
+import * as chai from 'chai';
 
-var chai = require('chai');
 //var sinon = require('sinon');
 
 function fakeBaseReporterDecorator() {}
@@ -39,10 +38,10 @@ describe('Summary reporter', function () {
 	var b2 = { id: 'browser2' };
 	var b3 = { id: 'browser3' };
 
-	function setupReporter(fakeConfig) {
+	async function setupReporter(fakeConfig) {
 		writeOutput = '';
-		var reporterModule = require('..');
-		reporter = new reporterModule['reporter:summary'][1](fakeBaseReporterDecorator, fakeConfig);
+		var reporterModule = await import('../index.js');
+		reporter = new reporterModule.default['reporter:summary'][1](fakeBaseReporterDecorator, fakeConfig);
 		reporter.writeCommonMsg = function(s) { writeOutput += s; };
 		reporter.renderBrowser = function(b) { return b.id; };
 	}
@@ -78,8 +77,8 @@ describe('Summary reporter', function () {
 	}
 
 	describe("config option `show`", function() {
-		it("displays correctly for show=failed", function() {
-			setupReporter({
+		it("displays correctly for show=failed", async function() {
+			await setupReporter({
 				summaryReporter: {
 					show: 'failed'
 				}
@@ -102,8 +101,8 @@ describe('Summary reporter', function () {
 					"shows failed tests if some browsers were successful and skipped");
 		});
 
-		it("displays correctly for show=skipped", function() {
-			setupReporter({
+		it("displays correctly for show=skipped", async function() {
+			await setupReporter({
 				summaryReporter: {
 					show: 'skipped'
 				}
@@ -126,8 +125,8 @@ describe('Summary reporter', function () {
 					"shows failed tests if some browsers were successful and skipped");
 		});
 
-		it("displays correctly for show=all", function() {
-			setupReporter({
+		it("displays correctly for show=all", async function() {
+			await setupReporter({
 				summaryReporter: {
 					show: 'all'
 				}
@@ -153,8 +152,8 @@ describe('Summary reporter', function () {
 
 	describe("config option `browserList`", function() {
 		describe("browserList=always", function() {
-			beforeEach(function() {
-				setupReporter({
+			beforeEach(async function() {
+				await setupReporter({
 					summaryReporter: {
 						show: 'failed',
 						browserList: 'always'
@@ -174,8 +173,8 @@ describe('Summary reporter', function () {
 
 		describe("browserList=ifneeded", function() {
 			describe("with show=all", function() {
-				beforeEach(function() {
-					setupReporter({
+				beforeEach(async function() {
+					await setupReporter({
 						summaryReporter: {
 							show: 'all',
 							browserList: 'ifneeded'
@@ -208,8 +207,8 @@ describe('Summary reporter', function () {
 			});
 
 			describe("with show=failed", function() {
-				beforeEach(function() {
-					setupReporter({
+				beforeEach(async function() {
+					await setupReporter({
 						summaryReporter: {
 							show: 'failed',
 							browserList: 'ifneeded'
@@ -254,8 +253,8 @@ describe('Summary reporter', function () {
 			});
 
 			describe("with show=skipped", function() {
-				beforeEach(function() {
-					setupReporter({
+				beforeEach(async function() {
+					await setupReporter({
 						summaryReporter: {
 							show: 'skipped',
 							browserList: 'ifneeded'
@@ -313,8 +312,8 @@ describe('Summary reporter', function () {
 		});
 
 		describe("browserList=never", function() {
-			beforeEach(function() {
-				setupReporter({
+			beforeEach(async function() {
+				await setupReporter({
 					summaryReporter: {
 						show: 'all',
 						browserList: 'never'
@@ -339,8 +338,8 @@ describe('Summary reporter', function () {
 	});
 
 	describe("unexpected input", function() {
-		beforeEach(function() {
-			setupReporter({});
+		beforeEach(async function() {
+			await setupReporter({});
 		});
 
 		it('should safely handle missing suite browser entries when specSuccess fires', function () {
@@ -350,8 +349,8 @@ describe('Summary reporter', function () {
 	});
 
 	describe("many browsers", function() {
-		beforeEach(function() {
-			setupReporter({});
+		beforeEach(async function() {
+			await setupReporter({});
 		});
 
 		it('should format >10 browsers correctly', function() {
@@ -364,8 +363,8 @@ describe('Summary reporter', function () {
 	});
 
 	describe("duplicate test names", function() {
-		beforeEach(function() {
-			setupReporter({
+		beforeEach(async function() {
+			await setupReporter({
 				summaryReporter: {
 					show: "all"
 				}

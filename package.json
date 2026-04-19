@@ -4,7 +4,7 @@
   "description": "Displays a summary of tested browsers and failed testcases after a test run.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/reporter.spec.js"
+    "test": "mocha test/reporter.spec.mjs"
   },
   "author": "Stephan Hohe <sth.dev@tejp.de>",
   "license": "MIT",
@@ -27,8 +27,8 @@
     "node": ">=16"
   },
   "devDependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^10.0.0"
+    "chai": "^6.2.2",
+    "mocha": "^11.7.5"
   },
   "dependencies": {
     "chalk": "^4.0.0"
